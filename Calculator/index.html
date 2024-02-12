@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-[100vh] w-full flex justify-center  items-center">
+    <span class="flex justify-center items-center w-full h-full blur-[20px] rounded-2xl bg-black"></span>
+   
+        <div class="my-auto w-[400px] h-[450px]  rounded-xl p-2 absolute z-2 top-[26vh] left-[33.7%] bg-slate-300">
+
+            <input type="text" id="display" class="px-5 text-[2rem] rounded-xl w-full h-[50px] outline-none shadow-md text-end"></input>
+
+            <div class="flex flex-wrap justify-center items-center gap-2 w-[100%] h-450px mt-5 ">
+
+              <button id="clear" onclick="currentDisplay = 0;
+              document.querySelector('#display').value = currentDisplay;
+              " class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 font-bold shadow-xl text-[1.4rem] drop-shadow-2xl">AC</button>
+
+              <button id="one" onclick="currentDisplay += '1';
+              document.querySelector('#display').value = currentDisplay;
+              " class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 font-bold  text-[1.4rem] drop-shadow-xl">1</button>
+
+              <button id="two" onclick="currentDisplay += '2'; 
+              document.querySelector('#display').value = currentDisplay; " class="w-[100px] h-[50px] text-[1.4rem]  rounded-lg bg-green-400 hover:bg-green-600 font-bold drop-shadow-xl">2</button>
+
+              <button id="plus" onclick="currentDisplay = currentDisplay + '+';
+              document.querySelector('#display').value = currentDisplay;
+              " class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 text-[1.4rem]  font-bold drop-shadow-xl">+</button>
+
+              <button id="three" onclick="currentDisplay += '3';
+              document.querySelector('#display').value = currentDisplay;
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 text-[1.4rem]  font-bold drop-shadow-xl">3</button>
+
+              <button id="four" onclick="currentDisplay += '4';
+              document.querySelector('#display').value = currentDisplay;
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 text-[1.4rem]  font-bold drop-shadow-xl">4</button>
+
+              <button id="minus" onclick="currentDisplay += '-';
+              document.querySelector('#display').value = currentDisplay;
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 text-[1.4rem] font-bold drop-shadow-xl">-</button>
+
+              <button id="five" onclick="currentDisplay += '5';
+              document.querySelector('#display').value = currentDisplay;
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 drop-shadow-xl text-[1.4rem] font-bold hover:bg-green-600 ">5</button>
+
+              <button id="six" onclick="currentDisplay += '6';
+              document.querySelector('#display').value = currentDisplay;
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 text-[1.4rem] font-bold drop-shadow-xl">6</button>
+
+              <button id="multiply" onclick="currentDisplay += '*';
+              document.querySelector('#display').value = currentDisplay;
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 text-[1.4rem] font-bold drop-shadow-xl">*</button>
+
+              <button id="seven" onclick="currentDisplay += '7';
+              document.querySelector('#display').value = currentDisplay;
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 text-[1.4rem] font-bold drop-shadow-xl">7</button>
+
+              <button id="eight" onclick="currentDisplay += '8';
+              document.querySelector('#display').value = currentDisplay;
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 text-[1.4rem] font-bold drop-shadow-xl">8</button>
+
+              <button id="divide" onclick="currentDisplay = currentDisplay + '/';
+              document.querySelector('#display').value = currentDisplay;
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 text-[1.4rem] font-bold drop-shadow-xl">/</button>
+
+              <button id="nine" onclick="currentDisplay += '9';
+              document.querySelector('#display').value = currentDisplay;
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 text-[1.4rem] hover:bg-green-600 text-[1.4rem] font-bold drop-shadow-xl">9</button>
+
+              <button id="zero" onclick="currentDisplay += '0';
+              document.querySelector('#display').value = currentDisplay;
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 text-[1.4rem] font-bold drop-shadow-xl">0</button>
+
+              <button id="modulus" onclick="currentDisplay += '%';
+              document.querySelector('#display').value = currentDisplay;
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 text-[1.4rem] font-bold drop-shadow-xl">%</button>
+
+              <button id="decimal" onclick="currentDisplay += '.';
+              document.querySelector('#display').value = currentDisplay;
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 text-[1.4rem] font-bold drop-shadow-xl">.</button>
+
+              <button id="result" onclick=" currentDisplay = eval(currentDisplay);
+              document.querySelector('#display').value = currentDisplay";
+              "  class="w-[100px] h-[50px] rounded-lg bg-green-400 hover:bg-green-600 text-[1.4rem] font-bold drop-shadow-xl">=</button>
+
+            </div>
+      
+          </div>
+        
+
+    <script>
+        let currentDisplay = '';
+        document.querySelector('#display').value = currentDisplay;
+    </script>
+</body>
+</html>
