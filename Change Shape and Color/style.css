@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#container{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#circle{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#shape{
+    width: 80px;
+    height: 80px;
+    background-color: white;
+}
+#changeColor{
+    margin-top: 20px;
+    width: 120px;
+    height: 30px;
+    font-weight: bold;
+
+}
+#changeColor:hover{
+    cursor: pointer;
+}
+#changeShape{
+    margin-top: 20px;
+    width: 120px;
+    height: 30px;
+    font-weight: bold;
+
+}
+#changeShape:hover{
+    cursor: pointer;
+}
