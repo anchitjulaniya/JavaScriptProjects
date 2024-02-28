@@ -10,7 +10,7 @@ changemode.addEventListener('click',()=>{
         document.body.style.backgroundColor = "black";
         document.body.style.color = "white";
         changemode.style.backgroundColor = "rgb(34,34,34)";
-        circle.style.left = "77px"; 
+        circle.style.left = "5px"; 
         toggled = true;
         console.log(toggled);
     }
@@ -18,7 +18,7 @@ changemode.addEventListener('click',()=>{
         document.body.style.backgroundColor = "white";
         document.body.style.color = "black";
         changemode.style.backgroundColor = "rgb(34,34,34)";
-        circle.style.left = "5px"; 
+        circle.style.left = "77px"; 
         toggled = false;
         console.log(toggled);
     }
