@@ -9,14 +9,14 @@ changemode.addEventListener('click',()=>{
         bodyEle.style.backgroundColor = "black";
         bodyEle.style.color = "white";
         changemode.style.backgroundColor = "rgb(34,34,34)";
-        circle.style.left = "5px"; 
+        circle.style.right = "5px"; 
         toggled = true;
     }
     else{
         bodyEle.style.backgroundColor = "white";
         bodyEle.style.color = "black";
         changemode.style.backgroundColor = "rgb(34,34,34)";
-        circle.style.right = "5px"; 
+        circle.style.left = "5px"; 
         toggled = false;
     }
 })
