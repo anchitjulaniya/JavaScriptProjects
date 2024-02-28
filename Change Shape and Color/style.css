@@ -12,36 +12,78 @@
     justify-content: center;
 }
 #circle{
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
-    background-color: green;
+    background-color: rgb(128,232,189);
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow:0 0px 115px rgb(0,0,0);
+    transition: 0.6s;
 }
+
 #shape{
-    width: 80px;
-    height: 80px;
-    background-color: white;
-}
-#changeColor{
-    margin-top: 20px;
     width: 120px;
-    height: 30px;
-    font-weight: bold;
+    height: 120px;
+    background-color: white;
+    /* box-shadow:0 0px 5px rgb(0,0,0); */
+    border-radius: 5px;
+    transition:all 0.6s ease-in-out;
+}
+#Ssquare{
+    width: 120px;
+    height: 120px;
+    background-color: yellow;
+    transition:all 0.6s ease-in-out;
 
 }
+#Scircle{
+    width: 120px;
+    height: 120px;
+    background-color: red;
+    border-radius: 50%;
+    transition:all 0.6s ease-in-out;
+}
+#Shexagon{
+    rotate: 90deg;
+    width: 120px;
+    height: 120px;
+    background-color: yellowgreen;
+    border-radius: 5px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    transition:all 0.6s ease-in-out;
+}
+#Srectangle{
+    width: 150px;
+    height: 120px;
+    background-color: pink;
+    /* box-shadow:0 0px 5px rgb(0,0,0); */
+    border-radius: 5px;
+    transition:all 0.6s ease-in-out;
+}
+
 #changeColor:hover{
     cursor: pointer;
+
 }
-#changeShape{
+.button{
     margin-top: 20px;
     width: 120px;
     height: 30px;
     font-weight: bold;
-
+    /* box-shadow:0 0px 215px rgb(0,0,0); */
+    margin-top: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid black;
 }
-#changeShape:hover{
+.button-container{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.button:hover{
     cursor: pointer;
 }
