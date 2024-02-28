@@ -14,7 +14,7 @@ changemode.addEventListener('click',()=>{
         bodyEle.style.backgroundColor = "white";
         bodyEle.style.color = "black";
         changemode.style.backgroundColor = "rgb(34,34,34)";
-        
+        changemode.style.positi = 
         toggled = false;
     }
 })
