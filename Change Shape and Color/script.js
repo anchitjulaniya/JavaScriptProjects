@@ -29,7 +29,7 @@ DSize.addEventListener('click',function(){
 })
 
 
-    let index = 0;
+    let index = 0;  
     changeShape.addEventListener('click',()=>{
     let shapeArr = ["Scircle","Ssquare", "Srectangle", "Shexagon"];
     if(index <= shapeArr.length-1){

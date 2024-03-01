@@ -7,12 +7,18 @@
     <link rel="shortcut icon" href="calendar.png" type="image/x-icon">
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        input[type = "date"]::-webkit-calender-picker-indicator{
+            cursor: pointer;
+            /* display: none !important; */
+        }
+    </style>
     <script src="script.js" defer></script>
 </head>
 <body class="bg-[rgb(10,108,241)] h-[100vh] flex justify-center items-center">
     <div class="flex-col w-[450px]">
         <span class="flex items-center justify-center bg-black gap-5 p-7 rounded-xl">
-            <label class="text-white">DOB</label>
+            <!-- <label class="text-white">DOB</label> -->
             <input class="w-3/5 px-5 py-3 rounded-xl outline-none" type="date" name="" id="InputDate">
             <button id="calculate" class="bg-white w-2/5 text-black  py-3 px-5 rounded-xl hover:bg-[rgb(142,142,142)]">Calculate</button>
         </span>

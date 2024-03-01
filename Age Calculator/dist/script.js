@@ -33,13 +33,13 @@
         let resultYear;
         let resultMonth;
         let resultDay;
-        // if((BirthYear > currYear) || (BirthMonth > currMonth && BirthYear == currYear) || (
-        //     BirthDay > currDay && BirthMonth == currMonth && BirthYear == currYear 
-        // )){
-        //     resYear.innerText = "Not";
-        //     resMonth.innerText = "Yet";
-        //     resDay.innerText = "Born";  
-        // }
+        if((BirthYear > currYear) || (BirthMonth > currMonth && BirthYear == currYear) || (
+            BirthDay > currDay && BirthMonth == currMonth && BirthYear == currYear 
+        )){
+            resYear.innerText = "Not";
+            resMonth.innerText = "Yet";
+            resDay.innerText = "Born";  
+        }
 
 
         resultYear = currYear - BirthYear;
