@@ -5,4 +5,4 @@
 4. [Age Calculator](https://anchitjulaniya.github.io/JavaScriptProjects/Age%20Calculator/dist/)
 5. [Generating the keyboard code](https://anchitjulaniya.github.io/JavaScriptProjects/Generating%20the%20keyboard%20code/)
 6. [Tabs](https://anchitjulaniya.github.io/JavaScriptProjects/Tabs/dist/)
-7. [Random COlor Generator]()
+7. [Random Color Generator](https://anchitjulaniya.github.io/JavaScriptProjects/Random_Color_Generator/)
