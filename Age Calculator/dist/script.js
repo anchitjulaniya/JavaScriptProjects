@@ -20,12 +20,10 @@
     });
     // console.log(BirthDay, BirthMonth, BirthYear);
  
-   const resYear = document.getElementById("resYear");
-   const resMonth = document.getElementById("resMonth");
-   const resDay = document.getElementById("resDay");
-   
-
-
+    const resYear = document.getElementById("resYear");
+    const resMonth = document.getElementById("resMonth");
+    const resDay = document.getElementById("resDay");
+    
     calculate.addEventListener("click",function(){
         console.log(typeof currDay, currMonth, currYear);
         console.log(BirthDay, BirthMonth, BirthYear);
@@ -40,9 +38,8 @@
             resMonth.innerText = "Yet";
             resDay.innerText = "Born";  
         }
-
-
-        resultYear = currYear - BirthYear;
+        else{
+            resultYear = currYear - BirthYear;
         if(currMonth < BirthMonth){
             resultYear--;
             resultMonth = 12 + currMonth - BirthMonth;
@@ -66,6 +63,9 @@
             resYear.innerText = `${resultYear}`;
             resMonth.innerText = `${resultMonth}`;
             resDay.innerText = `${resultDay}`;
+        }
+
+        
 
     })
     
