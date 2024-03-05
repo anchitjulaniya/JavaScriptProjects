@@ -6,3 +6,5 @@
 5. [Generating the keyboard code](https://anchitjulaniya.github.io/JavaScriptProjects/Generating%20the%20keyboard%20code/)
 6. [Tabs](https://anchitjulaniya.github.io/JavaScriptProjects/Tabs/dist/)
 7. [Random Color Generator](https://anchitjulaniya.github.io/JavaScriptProjects/Random_Color_Generator/)
+8. [To Do List](https://anchitjulaniya.github.io/JavaScriptProjects/ToDoList/TODOLIST.HTML)
+9. [Emoji Finder](https://anchitjulaniya.github.io/JavaScriptProjects/Emoji%20Project/)
