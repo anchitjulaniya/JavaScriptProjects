@@ -16,7 +16,7 @@ for(let i=0;i<numberOfDivs;i++){
     div.append(divContent);
     box.append(div);
 
-    div.style.height = "150px";
+    div.style.height = "180px";
     div.style.width = "300px";
     div.style.border = "2px solid black"
     div.style.borderRadius = "10px";

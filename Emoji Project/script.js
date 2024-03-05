@@ -2,6 +2,7 @@ let container = document.getElementById("tablebody_container");
 let search_field = document.getElementById("search_field");
 
 let filterFunction = (value)=>{
+    
     let filteredData = emojiList.filter(e=>{
         if(e.description.indexOf(value) != -1){
             return true;
@@ -13,7 +14,12 @@ let filterFunction = (value)=>{
             return true;
         }    
     })
+    if(value.trim() == ""){
+        displayEmoji(emojiList);
+    }
+    else{
     displayEmoji(filteredData);
+    }
 }
 
 

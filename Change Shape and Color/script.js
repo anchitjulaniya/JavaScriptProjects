@@ -28,7 +28,6 @@ DSize.addEventListener('click',function(){
     circle.style.width = height + "px"; 
 })
 
-
     let index = 0;  
     changeShape.addEventListener('click',()=>{
     let shapeArr = ["Scircle","Ssquare", "Srectangle", "Shexagon"];
@@ -36,8 +35,6 @@ DSize.addEventListener('click',function(){
         shape.setAttribute("id",shapeArr[index]);
         index = (index+1)%shapeArr.length;
     }
-
-
 })
 
 
