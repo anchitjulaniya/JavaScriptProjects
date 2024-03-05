@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Project</title>
+    <link rel="shortcut icon" href="emoji-happy.gif" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="data.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-black text-white py-10 px-10">
+    <h1 class="font-semibold text-4xl tracking-wider">Emojee - Emoji 🔍 Application</h1><br>
+    <hr><br>
+    <input type="text" name="" id="search_field" placeholder="Emoji Search" class="text-md px-5 tracking-wider py-1 w-[250px] rounded-md outline-none text-black border-white border-2">
+    <button type="submit" class="font-semibold bg-white text-black hover:bg-black hover:text-white duration-700 px-3 py-1 rounded-md tracking-wider border-white border-2 ease-in-out ml-3">Submit</button>
+    
+    
+
+    <table class="my-10">
+        <thead>
+            <tr class="font-bold">
+                <td class="text-red-500">EMOJI</td>
+                <td class="text-green-500">ALIASES</td>
+                <td class="text-blue-400">DESCRIPTION</td>
+            </tr>
+        </thead>
+        <tbody id="tablebody_container">
+            
+        </tbody>
+    </table>
+</body>
+</html>
