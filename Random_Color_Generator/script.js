@@ -1,17 +1,49 @@
 
-let numberOfDivs = 48;
-let box = document.getElementById("box");
+// let numberOfDivs = 48;
+// let box = document.getElementById("box");
 
-let color = ()=>{
-    let num1 = Math.floor(Math.random()*256);
-    let num2 = Math.floor(Math.random()*256);
-    let num3 = Math.floor(Math.random()*256); 
+// let color = ()=>{
+//     let num1 = Math.floor(Math.random()*256);
+//     let num2 = Math.floor(Math.random()*256);
+//     let num3 = Math.floor(Math.random()*256); 
+//     return `rgb(${num1},${num2},${num3})`;
+// }
+
+// for(let i=0;i<numberOfDivs;i++){
+//     let randomColor = color();
+//     const div = document.createElement("div");
+//     const divContent = document.createTextNode(randomColor);
+//     div.append(divContent);
+//     box.append(div);
+
+//     div.style.height = "180px";
+//     div.style.width = "300px";
+//     div.style.border = "2px solid black"
+//     div.style.borderRadius = "10px";
+//     div.style.display = "flex";
+//     div.style.justifyContent = "center";
+//     div.style.alignItems = "center";
+//     div.style.fontWeight = "bold";
+//     div.style.backgroundColor = `${randomColor}`
+    
+//     console.log(div);
+// }
+
+
+// ----------------------------------------------------------
+
+let numberOfDivs = 48;
+let color = () => {
+    let num1 = Math.floor(Math.random() * 256);
+    let num2 = Math.floor(Math.random() * 256);
+    let num3 = Math.floor(Math.random() * 256);
     return `rgb(${num1},${num2},${num3})`;
 }
-
-for(let i=0;i<numberOfDivs;i++){
+for (let i = 0; i < numberOfDivs; i++) {
     let randomColor = color();
     const div = document.createElement("div");
+    div.classList.add("animate__animated", "animate__jackInTheBox"); // Adding the classes
+    div.setAttribute("data-aos", "flip-up"); // Adding data-aos attribute
     const divContent = document.createTextNode(randomColor);
     div.append(divContent);
     box.append(div);
@@ -24,7 +56,7 @@ for(let i=0;i<numberOfDivs;i++){
     div.style.justifyContent = "center";
     div.style.alignItems = "center";
     div.style.fontWeight = "bold";
-    div.style.backgroundColor = `${randomColor}`
-    
+    div.style.backgroundColor = `${randomColor}`;
+
     console.log(div);
 }

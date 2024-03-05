@@ -7,10 +7,13 @@ let filterFunction = (value)=>{
         if(e.description.indexOf(value) != -1){
             return true;
         }
+        
         if(e.aliases.some(e=>e.startsWith(value))){
+            // console.log("checkingline12" , e.startsWith(value))
             return true;
         }
         if(e.tags.some(e=>e.startsWith(value))){
+            // console.log("checkingline12" ,e.startsWith(value))
             return true;
         }    
     })
