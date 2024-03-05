@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        .xyz:checked + .spanxyz{
+            text-decoration: line-through;
+            color : rgb(147,146,146);
+        }
+
+    </style>
+    <link rel="shortcut icon" href="to-do-list.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="todolist1.js" defer></script>
+</head>
+<body class="flex justify-center items-center h-[100vh] bg-gradient-to-t from-sky-500 to-indigo-500">
+    <div id="todolist" class="drop-shadow-2xl flex flex-col px-7 pt-8 h-[500px] w-[450px] rounded-xl bg-[rgb(210,210,210)] ">
+        <span class="flex justify-between">
+            <h1 class="text-4xl font-semibold">Todo</h1> 
+            <span class="flex">
+                <p id="date" class="flex flex-col">     
+                    <span class="text-xl font-semibold">Today</span>
+                    <span id="setdate" class="text-sm"></span>
+                </p>
+                <img class="h-[38px] w-[36px]" src="calender.gif" alt="">
+            </span>
+        </span>
+            <hr class= "bg-gradient-to-l from-sky-500 to-indigo-500 border-0 h-px my-3 ">
+            <span class="mx-auto flex gap-3  w-[100%]">
+                <input id="inputBox" type="text" name="" id="" placeholder="Add a new task" class="rounded px-3  outline-none w-[90%] h-[38px]">
+                <button id="createButton" class="flex justify-center bg-purple-800 text-white text-2xl px-2 rounded-md w-[10%] h-[38px]">+</button>
+            </span>
+        <div id="uncompletedTask" class="mt-2 flex flex-col">    
+            <!-- <span class="flex items-center gap-3 my-3">
+                <input class="h-[25px] w-[25px] border-2 border-indigo-500" type="checkbox" name="" id="">
+                <span id="text" class="w-[85%] text-black">Lorem, ipsum dolor.</span>
+            </span> -->
+        </div>
+
+
+        <!-- completed task -->
+        <div id="completedTask">
+            <hr class= "bg-gradient-to-l from-sky-500 to-indigo-500 border-0 h-px my-3 ">
+
+            <span class="flex items-center gap-3 my-3">
+                <input type="checkbox" class="form-checkbox accent-[rgb(147,146,146)] h-[25px] w-[25px] " checked>
+                <del class="text-[rgb(147,146,146)]">
+                    <span id="text" class="w-[85%] text-[rgb(147,146,146)]">Buy headphone</span>
+                </del>
+                <span id="label" class=""></span>
+            </span>
+         
+        </div>
+    
+    
+    
+
+
+
+    </div>
+</body>
+</html>
