@@ -9,4 +9,4 @@
 8. [To Do List](https://anchitjulaniya.github.io/JavaScriptProjects/ToDoList/TODOLIST.HTML)
 9. [Emoji Finder](https://anchitjulaniya.github.io/JavaScriptProjects/Emoji%20Project/)
 10. [Leader Board](https://anchitjulaniya.github.io/JavaScriptProjects/LeaderBoard/)
-11. [next]()
+11. [StopWatch](https://anchitjulaniya.github.io/JavaScriptProjects/StopWatch/)
