@@ -214,14 +214,16 @@
     <script src="script.js" defer></script>
 </head>
 <body class="bg-black flex flex-col justify-center items-center h-[80vh]">  
-    <div style="text-shadow: #FC0 1px 0 10px;" class="flex text-blue-400 mt-[60px] gap-8 sm:gap-12 md:gap-16 lg:gap-24 text-xl md:text-2xl lg:text-4xl mb-10">
+    <div style="text-shadow: #FC0 1px 0 10px;" class="flex text-blue-400 mt-[60px] gap-3 sm:gap-8 md:gap-16 lg:gap-24 text-xl md:text-2xl lg:text-4xl mb-10">
         <span>Hour</span>
         <span class="ml-4 pl-4">Minute</span>
         <span class="ml-4">Seconds</span>
+        <span class="ml-4">MilliSeconds</span>
+        
     </div>
     <div style="text-shadow: 1px 0px 10px rgb(0, 254, 0);
-    " id="stopwatch" class=" tracking-widest        rounded-xl text-[rgb(0,254,0)] text-7xl md:text-8xl lg:text-9xl font-bold">
-        <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>
+    " id="stopwatch" class=" tracking-widest        rounded-xl text-[rgb(0,254,0)] text-6xl md:text-8xl lg:text-9xl font-bold">
+        <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">00</span>
     </div>
     <div class="flex text-[#FC0] mt-[60px] gap-8 sm:gap-12 md:gap-16 lg:gap-24">
         <button class="text-[13px] sm:text-base md:text-xl lg:text-3xl" style="text-shadow: #FC0 1px 0 10px;" id="start" role="button">Start</button>
