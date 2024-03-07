@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <link rel="shortcut icon" href="stopwatch.png" type="image/x-icon">
+    <style>
+   
+/* CSS */
+    #start {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+    #start:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    }
+
+    @keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+    }
+
+    #start:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    }
+
+    #stop{
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+    #stop:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    }
+
+    @keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+    }
+
+    #stop:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    }
+
+    #reset{
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+    #reset:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    }
+
+    @keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+    }
+
+    #reset:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    }
+    
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-black flex flex-col justify-center items-center h-[80vh]">  
+    <div style="text-shadow: #FC0 1px 0 10px;" class="flex text-blue-400 mt-[60px] gap-8 sm:gap-12 md:gap-16 lg:gap-24 text-xl md:text-2xl lg:text-4xl mb-10">
+        <span>Hour</span>
+        <span class="ml-4 pl-4">Minute</span>
+        <span class="ml-4">Seconds</span>
+    </div>
+    <div style="text-shadow: 1px 0px 10px rgb(0, 254, 0);
+    " id="stopwatch" class=" tracking-widest        rounded-xl text-[rgb(0,254,0)] text-7xl md:text-8xl lg:text-9xl font-bold">
+        <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>
+    </div>
+    <div class="flex text-[#FC0] mt-[60px] gap-8 sm:gap-12 md:gap-16 lg:gap-24">
+        <button class="text-[13px] sm:text-base md:text-xl lg:text-3xl" style="text-shadow: #FC0 1px 0 10px;" id="start" role="button">Start</button>
+
+        <button class="text-[13px] sm:text-base md:text-xl lg:text-3xl" style="text-shadow: #FC0 1px 0 10px;" id="stop" >Stop</button>
+        
+        <button class="text-[13px] sm:text-base md:text-xl lg:text-3xl" style="text-shadow: #FC0 1px 0 10px;" id="reset">Reset</button>
+    </div>
+    
+    
+</body>
+</html>
