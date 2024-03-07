@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generating the keyboard code</title>
     <link rel="shortcut icon" href="icons8-keyboard-50.png" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <style>
         .eventKey{
-            color:rgb(106,194,134);
+        color:rgb(106,194,134);
         }
     </style>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js" defer></script>
 </head>
-<body class="flex justify-center items-center h-[100vh]">
-    <div class="flex-col h-[400px] justify-center items-center">
-        <div id="displayBox" class="text-[rgb(70,70,70)] text-6xl font-bold rounded-2xl px-5 py-5 shadow-xl text-center flex justify-center items-center">Press any keyboard key
+<body class="flex justify-center items-center h-[100vh] w-full">
+    
+    <div class="flex-col h-[400px] justify-center items-center mx-auto">
+        <div id="displayBox" class="bg-white text-[rgb(70,70,70)] text-6xl font-bold rounded-2xl px-5 py-5 shadow-xl text-center flex justify-center items-center">Press any keyboard key
         </div>
 
         <div id="keyCode" class="mt-16  text-[rgb(70,70,70)] text-6xl font-bold rounded-2xl px-5 py-5  text-center none "></div>
     </div>
+
+    <!-- ---- -->
+    
 </body>
 </html>
