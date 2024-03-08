@@ -97,7 +97,7 @@ let intervalFunction =  function(){
         }
         // console.log(num, min, hr);
         num++;
-    },100)
+    },10)
 // console.log(idSecond);
 }
 
@@ -132,5 +132,19 @@ reset.addEventListener("click",()=>{
 
 
 
+// let x = 10
 
+// console.log("Hello");
+// let set = function(){
+//     setTimeout(()=>{       
+//         console.log(x + 1)   
+//     },1000)
+// }
 
+// let set2 = function(){
+//     setTimeout(()=>{       
+//         console.log(x - 1)
+//     },1000)
+// }
+// set();
+// set2();
