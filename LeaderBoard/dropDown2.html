@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cricket Country Dropdown</title>
+<!-- <link rel="stylesheet" href="styles.css">
+ -->
+ <style>
+    /* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Add a pointer cursor on links/buttons */
+.dropdown-content a {
+  cursor: pointer;
+}
+
+ </style>
+</head>
+<body>
+
+<div class="dropdown">
+  <button class="dropbtn">Select Country</button>
+  <div class="dropdown-content">
+    <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="India"><img style="width: 30px; height: 30px;" src="flag/India_Flag.png" alt="India Flag"> India</a>
+    <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="Australia"><img style="width: 30px; height: 30px;" src="flag/australia_flag.png" alt="Australia Flag"> Australia</a>
+    <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="afganistan"><img style="width: 30px; height: 30px;" src="flag/afganistan_flag.png" alt="India Flag"> afganistan</a>
+    <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="bangladesh"><img style="width: 30px; height: 30px;" src="flag/bangladesh_flag.png" alt="Australia Flag"> bangladesh</a>
+    <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="ireland"><img style="width: 30px; height: 30px;" src="flag/ireland_flag.png" alt="India Flag"> ireland</a>
+    <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="newZealand"><img style="width: 30px; height: 30px;" src="flag/newZealand_flag.png" alt="Australia Flag"> newZealand</a>
+    <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="pakistan"><img style="width: 30px; height: 30px;" src="flag/Pakistan_flag.webp" alt="India Flag"> pakistan</a>
+    <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="srilanka"><img style="width: 30px; height: 30px;" src="flag/srilank_flag.webp" alt="India Flag"> srilanka</a>
+    
+    <!-- Add more countries as needed -->
+  </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+  const dropdownItems = document.querySelectorAll('.dropdown-content a');
+  
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', function (e) {
+      e.preventDefault();
+      const selectedCountry = this.getAttribute('data-country');
+      alert('You selected ' + selectedCountry);
+      // You can perform any desired action with the selected country here
+    });
+  });
+});
+
+</script>
+<!-- <script src="script.js"></script> -->
+</body>
+</html>

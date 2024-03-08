@@ -9,22 +9,163 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
+    <style>
+            .submitButton {
+            display: flex;
+            align-items: center;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 0.7em 1.4em 0.7em 1.1em;
+            color: white;
+            background: #ad5389;
+            background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+            border: none;
+            box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+            letter-spacing: 0.05em;
+            border-radius: 20em;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            text-shadow: #FC0 1px 0 10px;
+            }
+
+            .submitButton:hover {
+            box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+            }
+
+            .submitButton:active {
+            box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+            }
+
+        
+        /*--------- Dropdown Button */
+            .dropbtn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                /* background-color: #4CAF50; */
+                background-color: #352F44;
+                color: white;
+                padding-left: 5px;
+                padding-right: 8px;
+                
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                width: 150px;
+                height: 30px;
+                border-radius: 10px;
+            }
+
+            /* Dropdown button on hover & focus */
+            .dropbtn:hover, .dropbtn:focus {
+            background-color: #3e8e41;
+            }
+
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            /* hisghiknvkjfbvs */
+            background-color: #5C5470;
+            opacity: 1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 10px;
+            overflow-y: scroll;
+            height:400px;
+            width: 200px;
+            
+            }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+            color: #FAF0E6;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {background-color: #1B4242;}
+
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+            display: block;
+            }
+
+            /* Add a pointer cursor on links/buttons */
+            .dropdown-content a {
+            cursor: pointer;
+            }
+            ::-webkit-scrollbar {
+            width: 10px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+            }
+            
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+            background: #888; 
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+            }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script src="script.js" defer></script>
 </head>
 <body class="h-[100vh] bg-fixed bg-cover bg-center flex justify-center items-center" style="background-image: url('alessandro-bogliari-oDs_AxeR5g4-unsplash.jpg')">
-    <div class="bg-black bg-opacity-40 min-w-[650px] w-[60%] h-[80%] rounded-3xl backdrop-blur-[15px]   text-white flex flex-col justify-start items-center overflow-hidden shadow-sm shadow-[rgba(20,20,20,1)]  animate__animated animate__flipInY animate__delay-0.7s">
-        <header id="headerSection" class="flex flex-col justify-start items-center gap-[25px] shadow-md shadow-[rgb(180,180,180)] p-[15px] w-[100%]">
+    <div class="bg-black bg-opacity-40 min-w-[650px] w-[60%] h-[80%] rounded-3xl backdrop-blur-[15px] text-white flex flex-col justify-start items-center shadow-sm shadow-[rgba(20,20,20,1)] mostly-customized-scrollbar overflow-y-auto animate__animated animate__flipInY animate__delay-0.7s">
+        <header id="headerSection" class="flex bg-black bg-opacity-10 rounded-tl-3xl rounded-tr-3xl flex-col justify-start items-center gap-[25px] shadow-md shadow-[rgb(180,180,180)] p-[15px] w-[100%]">
             <h1 style="text-shadow: 0 0 9px;" class="text-3xl font-semibold font-serif  animate__animated animate__heartBeat animate__delay-1s">Leader Board</h1>
         
         <form class="flex flex-wrap justify-center items-center gap-3 text-black shadow-xl" action="">
             <input type="text" name="" id="" placeholder="First name" class="fName rounded px-2 w-[150px] h-[30px] outline-none border-2 border-[#387ADF]" required>
-                <input type="text" name="" id="" placeholder="Last name" class="lName rounded px-2 w-[150px] h-[30px] outline-none border-2 border-[#387ADF]" required>
-                <input type="text" name="" id="" placeholder="Country" class="country rounded px-2 w-[150px] h-[30px] outline-none border-2 border-[#387ADF]" required>
-                <input type="number" name="" class="score rounded px-2 w-[150px] h-[30px] outline-none border-2 border-[#387ADF] " placeholder="Player Score" required>
-                <button id="submitButton" style="text-shadow: 0 0 5px;" class="bg-gradient-to-tr from-violet-400 to-green-400 p-1 shadow-lg text-black border-[2px] hover:bg-black hover:text-white hover:border-[2px] hover:border-white px-3 rounded  duration-500 ease-in-out font-semibold drop-shadow-white drop-shadow-md">Add Player</button>
+            <input type="text" name="" id="" placeholder="Last name" class="lName rounded px-2 w-[150px] h-[30px] outline-none border-2 border-[#387ADF]" required>
+            <!-- <input type="text" name="" id="" placeholder="Country" class="country rounded px-2 w-[150px] h-[30px] outline-none border-2 border-[#387ADF]" required> -->
+           
+            <!-- dropdown start -->
+            <div class="dropdown">
+                <button id="dropbtn" class="dropbtn">Select Country <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                  </svg>
+                  </button>
+                <div class="dropdown-content">
+                  <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="India"><img style="width: 30px; height: 30px;" src="flag/India.png" alt="India Flag">India</a>
+                  <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="Australia"><img style="width: 30px; height: 30px;" src="flag/Australia.png" alt="Australia Flag">Australia</a>
+                  <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="Afganistan"><img style="width: 30px; height: 30px;" src="flag/Afganistan.png" alt="Afganistan Flag">Afganistan</a>
+                  <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="Bangladesh"><img style="width: 30px; height: 30px;" src="flag/Bangladesh.png" alt="Bangladesh Flag">Bangladesh</a>
+                  <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="Ireland"><img style="width: 30px; height: 30px;" src="flag/Ireland.png" alt="Ireland Flag">Ireland</a>
+                  <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="New Zealand"><img style="width: 30px; height: 30px;" src="flag/New Zealand.png" alt="New Zealand Flag">New Zealand</a>
+                  <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="Pakistan"><img style="width: 30px; height: 30px;" src="flag/Pakistan.webp" alt="Pakistan Flag">Pakistan</a>
+                  <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="Sri Lanka"><img style="width: 30px; height: 30px;" src="flag/Sri Lanka.webp" alt="Sri Lanka Flag">Sri Lanka</a>
+                  <a style="display: flex; align-items: center; gap: 25px;" href="#" data-country="South Africa"><img style="width: 30px; height: 30px;" src="flag/South Africa.png" alt="South Africa Flag">South Africa</a>
+                  
+               
+                </div>
+              </div>
+            <!-- sropdown -end -->
+            
+            <input type="number" name="" class="score rounded px-2 w-[150px] h-[30px] outline-none border-2 border-[#387ADF] " placeholder="Player Score" required>
+            <!-- <button id="submitButton" style="text-shadow: 0 0 5px;" class="bg-gradient-to-tr from-violet-400 to-green-400 p-1 shadow-lg text-black border-[2px] hover:bg-black hover:text-white hover:border-[2px] hover:border-white px-3 rounded  duration-500 ease-in-out font-semibold drop-shadow-white drop-shadow-md">Add Player</button> -->
+            <button id="submitButton"  class="submitButton" role="button">Add Player</button>
         </form>
         </header>
         <div id="contentSection" class="w-full py-[20px]"></div>
