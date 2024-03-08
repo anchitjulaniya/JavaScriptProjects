@@ -3,29 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emoji Project</title>
-    <link rel="shortcut icon" href="emoji-happy.gif" type="image/x-icon">
+    <title>😃Emoji Finder</title>
+    <link rel="shortcut icon" href="favicon12.webp" type="image/x-icon">
+
+    <style>
+        /* CSS */
+        .button-33 {
+        background-color: #c2fbd7;
+        border-radius: 100px;
+        box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+        color: green;
+        cursor: pointer;
+        display: inline-block;
+        font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+        padding: 7px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 250ms;
+        border: 0;
+        font-size: 16px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        margin-left: 25px;
+        }
+
+        .button-33:hover {
+        box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+        transform: scale(1.05) rotate(-1deg);
+        }
+
+
+        .button-70 {
+        background-image: linear-gradient(#0dccea, #0d70ea);
+        border: 0;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        font-family: Montserrat,sans-serif;
+        font-size: .9em;
+        margin: 5px;
+        padding: 10px 15px;
+        text-align: center;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="data.js"></script>
     <script src="script.js" defer></script>
 </head>
-<body class="bg-black text-white py-10 px-10">
-    <h1 class="font-semibold text-4xl tracking-wider">Emojee - Emoji 🔍 Application</h1><br>
+<body class="w-full bg-black text-white py-10 px-10 flex flex-col items-center">
+    <h1 class="font-semibold text-4xl tracking-wider text-center">Emojee - Emoji 🔍 Application</h1><br>
     <hr><br>
-    <input type="text" name="" id="search_field" placeholder="Emoji Search" class="text-md px-5 tracking-wider py-1 w-[250px] rounded-md outline-none text-black border-white border-2">
-    <button type="submit" class="font-semibold bg-white text-black hover:bg-black hover:text-white duration-700 px-3 py-1 rounded-md tracking-wider border-white border-2 ease-in-out ml-3">Submit</button>
+    <div class="mx-auto flex ">
+        <input style="box-shadow: 0px 0px 35px red;" type="text" name="" id="search_field" placeholder="Search Emojipedia" class="text-md px-5 tracking-wider py-1 w-[450px] rounded-md outline-none text-black border-white border-2">
+       
+        <!-- <button type="submit" class="font-semibold bg-white text-black hover:bg-black hover:text-white duration-700 px-3 py-1 rounded-md tracking-wider border-white border-2 ease-in-out ml-3">Submit</button> -->
+        <button class="button-33" role="button">Submit</button>
     
-    <table class="my-10">
-        <thead>
-            <tr class="font-bold">
-                <td class="text-red-500">EMOJI</td>
-                <td class="text-green-500">ALIASES</td>
-                <td class="text-blue-400">DESCRIPTION</td>
-            </tr>
-        </thead>
-        <tbody id="tablebody_container">
-            
-        </tbody>
-    </table>
+    </div>
+    
+    <div id="filterBox" class=" mt-10">
+        <button style="box-shadow: 0px 0px 45px blue;" id="Smile" class="button-70" role="button">Smile</button>
+        <button style="box-shadow: 0px 0px 45px blue;" id="Flag" class="button-70" role="button">Flag</button>
+        <button style="box-shadow: 0px 0px 45px blue;" id="Laugh" class="button-70" role="button">Laugh</button>
+        <button style="box-shadow: 0px 0px 45px blue;" id="Travel" class="button-70" role="button">Travel</button>
+        <button style="box-shadow: 0px 0px 45px blue;" id="People" class="button-70" role="button">People</button>
+        <button style="box-shadow: 0px 0px 45px blue;" id="Hand" class="button-70" role="button">Hand</button>
+        <button style="box-shadow: 0px 0px 45px blue;" id="People" class="button-70" role="button">People</button>
+    </div>
+
+    <div class="flex flex-wrap py-8 w-full px-10" id="emoji_container">  
+    </div>
+   
 </body>
 </html>
