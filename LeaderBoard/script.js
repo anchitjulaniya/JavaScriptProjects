@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
       item.addEventListener('click', function (e) {
         e.preventDefault();
         selectedCountry = this.getAttribute('data-country');
-        dropbtn.innerText = selectedCountry
+        dropbtn.innerText = selectedCountry;
         // console.log('You selected ' + selectedCountry);
         
       });
