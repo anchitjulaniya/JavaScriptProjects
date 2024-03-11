@@ -10,3 +10,4 @@
 9. [Emoji Finder](https://anchitjulaniya.github.io/JavaScriptProjects/Emoji%20Project/)
 10. [Leader Board](https://anchitjulaniya.github.io/JavaScriptProjects/LeaderBoard/)
 11. [StopWatch](https://anchitjulaniya.github.io/JavaScriptProjects/StopWatch/)
+12. [CLock](https://anchitjulaniya.github.io/JavaScriptProjects/DigitalClock/)
