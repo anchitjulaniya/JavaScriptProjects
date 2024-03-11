@@ -11,3 +11,4 @@
 10. [Leader Board](https://anchitjulaniya.github.io/JavaScriptProjects/LeaderBoard/)
 11. [StopWatch](https://anchitjulaniya.github.io/JavaScriptProjects/StopWatch/)
 12. [CLock](https://anchitjulaniya.github.io/JavaScriptProjects/DigitalClock/)
+13. [Burger King Franchise](https://anchitjulaniya.github.io/JavaScriptProjects/BurgerKingFranchise/)
