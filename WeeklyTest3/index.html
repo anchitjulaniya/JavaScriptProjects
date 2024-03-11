@@ -16,29 +16,29 @@
                <p>Product-1</p>
                <p id="price1">100</p> 
                <span class="flex justify-between items-center px-3 rounded-2xl w-[110px] h-[30px] border-[#87A922] border-[2px] bg-[#344955] text-white">
-                <button id="decrease1" class="font-extrabold text-[1.5rem] pb-1 ">-</button>
-                <p id="quantity1" class="font-semibold text-[1.5rem]">2</p>
-                <button id="increase1" class="font-extrabold text-[1.5rem] pb-1 ">+</button>
+                <button id="price1_Dec"  class="font-extrabold text-[1.5rem] pb-1 ">-</button>
+                <p id="product1_qty" class="font-semibold text-[1.5rem]">0</p>
+                <button id="price1_Inc" class="font-extrabold text-[1.5rem] pb-1 ">+</button>
                </span>
             </div>
 
             <div id="product2" class="rounded-2xl flex px-3 justify-between items-center bg-[#B5C0D0] w-[95%] h-[70px] font-semibold text-[#12372A] text-[1.3rem]">
-                <p>Product-1</p>
-                <p>200</p> 
+                <p>Product-2</p>
+                <p id="price2">200</p> 
                 <span class="flex justify-between items-center px-3 rounded-2xl w-[110px] h-[30px] border-[#87A922] border-[2px] bg-[#344955] text-white">
-                 <button class="font-extrabold text-[1.5rem] pb-1 ">-</button>
-                 <p class="font-semibold text-[1.5rem]">3</p>
-                 <button class="font-extrabold text-[1.5rem] pb-1 ">+</button>
+                 <button id="price2_Dec" class="font-extrabold text-[1.5rem] pb-1 ">-</button>
+                 <p id="product2_qty"  class="font-semibold text-[1.5rem]">0</p>
+                 <button id="price2_Inc"  class="font-extrabold text-[1.5rem] pb-1 ">+</button>
                 </span>
              </div>
 
              <div id="product3" class="rounded-2xl flex px-3 justify-between items-center bg-[#B5C0D0] w-[95%] h-[70px] font-semibold text-[#12372A] text-[1.3rem]">
-                <p>Product-1</p>
-                <p>300</p> 
+                <p>Product-3</p>
+                <p id="price3">300</p> 
                 <span class="flex justify-between items-center px-3 rounded-2xl w-[110px] h-[30px] border-[#87A922] border-[2px] bg-[#344955] text-white">
-                 <button class="font-extrabold text-[1.5rem] pb-1 ">-</button>
-                 <p class="font-semibold text-[1.5rem]">0</p>
-                 <button class="font-extrabold text-[1.5rem] pb-1 ">+</button>
+                 <button id="price3_Dec"  class="font-extrabold text-[1.5rem] pb-1 ">-</button>
+                 <p id="product3_qty" class="font-semibold text-[1.5rem]">0</p>
+                 <button id="price3_Inc"  class="font-extrabold text-[1.5rem] pb-1 ">+</button>
                 </span>
              </div>
 
@@ -48,7 +48,7 @@
                 <p class="text-2xl font-semibold text-black">Cart</p>
             
                 <span id="cartItemDisplayBox" class="w-full flex flex-col items-center gap-6">
-                    <div class="rounded-2xl flex px-3 justify-between items-center bg-[#B5C0D0] w-[95%] h-[70px] font-semibold text-[#12372A] text-[1.3rem]">
+                    <!-- <div class="rounded-2xl flex px-3 justify-between items-center bg-[#B5C0D0] w-[95%] h-[70px] font-semibold text-[#12372A] text-[1.3rem]">
                         <p>Product-1</p>
                         <span class="flex">
                              <p>2</p>
@@ -64,12 +64,12 @@
                               <p>&times;</p>
                               <p>200</p>
                           </span>
-                      </div> 
+                      </div>  -->
                     </div>
                 </span>
-             <div class="rounded-2xl flex px-3 justify-between items-center bg-[#B5C0D0] w-[95%] h-[70px] font-semibold text-[#12372A] text-[1.3rem]">
+             <div id="TotalBox" class="rounded-2xl flex px-3 justify-between items-center bg-[#B5C0D0] w-[95%] h-[70px] font-semibold text-[#12372A] text-[1.3rem]">
                 <p>Total</p>
-                <p>800</p>
+                <p id="TotalValue">0</p>
              </div> 
         </div>
         

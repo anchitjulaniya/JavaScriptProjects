@@ -6,10 +6,16 @@
     <title>Digital Clock</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
 </head>
-<body class="flex justify-center items-center h-[100vh]">
-    
-    <div style="border-radius: 100px 15px 100px 10px;box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;" class="h-[300px] w-[600px] bg-white"></div>
+<body class="flex flex-col justify-center items-center h-[100vh]">
+    <button id="changeCountry" class="absolute bg-black px-3 font-semibold h-[40px] top-[70px] right-[70px] text-white rounded-xl">Change Country</button>
+    <span class="text-4xl font-bold" id="country">India</span>
+    <div id="clock" style="border-radius: 100px 15px 100px 10px;box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;" class="h-[300px] w-[600px] bg-white text-8xl text-black flex items-center justify-center">
+        <span id="hr">00</span>:
+        <span id="min">00</span>:
+        <span id="sec">00</span>
+    </div>
     
 
 
