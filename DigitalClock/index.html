@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Clock</title>
-
+    <style>
+        #clock{color: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+    </style>
+    <link rel="shortcut icon" href="clock.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js" defer></script>
+
 </head>
 <body class="flex flex-col justify-center items-center h-[100vh]">
-    <button id="changeCountry" class="absolute bg-black px-3 font-semibold h-[40px] top-[70px] right-[70px] text-white rounded-xl">Change Country</button>
-    <span class="text-4xl font-bold" id="country">India</span>
-    <div id="clock" style="border-radius: 100px 15px 100px 10px;box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;" class="h-[300px] w-[600px] bg-white text-8xl text-black flex items-center justify-center">
+    <button id="changeTheme" class="absolute bg-black border shadow px-3 font-semibold h-[40px] top-[70px] right-[230px] text-white rounded-xl">Change Theme</button>
+    <button id="changeCountry" class="absolute bg-black border shadow px-3 font-semibold h-[40px] top-[70px] right-[70px] text-white rounded-xl">Change Country</button>
+    <span class="text-4xl font-bold text-white" id="country">India</span>
+    <div id="clock" style=" background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+     " class="h-[300px] w-[600px] bg-[rgba(255,255,255,1)] text-8xl text-black flex items-center justify-center border rounded-3xl">
         <span id="hr">00</span>:
         <span id="min">00</span>:
         <span id="sec">00</span>

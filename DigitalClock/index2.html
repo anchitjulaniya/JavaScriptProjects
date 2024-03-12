@@ -1,0 +1,52 @@
+To add the time zones for America (specifically Los Angeles) and China, you can modify the code as follows:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Zones</title>
+</head>
+<body>
+    <div id="country">Please select a country</div>
+    <button id="changeCountry">Change Country</button>
+    <div id="clock"></div>
+
+    <script>
+        let changeCountry = document.getElementById("changeCountry");
+        let countryList = 3;
+        let index = 0;
+        let country = document.getElementById("country");
+        let clock = document.getElementById("clock");
+
+        changeCountry.addEventListener("click", ()=>{
+            if(index % countryList == 0){
+                country.innerText = "America (Los Angeles)";
+                time('America/Los_Angeles');
+            } else if(index % countryList == 1){
+                country.innerText = "China";
+                time('Asia/Shanghai');
+            } else if(index % countryList == 2){
+                country.innerText = "India";
+                time('Asia/Kolkata');
+            }
+            index++;
+        });
+
+        function time(timezone){
+            setInterval(()=>{
+                const d = new Date();
+                const options = {timeZone: timezone, hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric'};
+                const formattedTime = new Intl.DateTimeFormat('en-US', options).format(d);
+                clock.innerText = formattedTime;
+            }, 1000);
+        }
+        // Initial call to set the time for the first country
+        time('America/Los_Angeles');
+    </script>
+</body>
+</html>
+```
+
+This code sets up the page with three buttons to change the displayed country (America, China, and India), along with their corresponding time zones. The time is displayed in 12-hour format with hours, minutes, and seconds. When you click the "Change Country" button, it cycles through the countries and updates the displayed time accordingly.
