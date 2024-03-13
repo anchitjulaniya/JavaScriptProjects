@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad Jokes generator</title>
+    <link rel="shortcut icon" href="laugh.png" type="image/x-icon">
+    <style>
+        body{
+            height: 100vh;
+            background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button-14 {
+        background-image: linear-gradient(#f7f8fa ,#e7e9ec);
+        border-color: #adb1b8 #a2a6ac #8d9096;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 10px;
+        box-shadow: rgba(255,255,255,.6) 0 1px 0 inset;
+        box-sizing: border-box;
+        color: #0f1111;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Amazon Ember",Arial,sans-serif;
+        font-size: 14px;
+        height: 29px;
+        font-size: 13px;
+        outline: 0;
+        overflow: hidden;
+        padding: 0 11px;
+        text-align: center;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        }
+
+        .button-14:active {
+        border-bottom-color: #a2a6ac;
+        }
+
+        .button-14:active:hover {
+        border-bottom-color: #a2a6ac;
+        }
+
+        .button-14:hover {
+        border-color: #a2a6ac #979aa1 #82858a;
+        }
+
+        .button-14:focus {
+        border-color: red;
+        box-shadow: rgba(228, 121, 17, .5) 1px 1px 30px 2px;
+        outline: 0;
+        }
+        #box{
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="box" class="w-[600px] h-[300px] rounded-2xl flex flex-col items-center">
+        <h1 class="text-white text-4xl font-bold pt-6" style="text-shadow: 2px 3px 0px #898999;">Dad Joke Generator</h1>
+        <div id="jokeBox" class="flex justify-center items-center h-[150px] w-[90%] my-3 text-white text-2xl text-center"></div>
+        <button id="button-14" class="button-14 font-semibold" role="button">TELL ME A JOKE</button>
+
+    </div>
+    <!--  -->
+    
+
+</body>
+</html>
