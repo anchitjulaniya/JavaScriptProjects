@@ -1,52 +1,55 @@
-To add the time zones for America (specifically Los Angeles) and China, you can modify the code as follows:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Zones</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Clocks</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .clock-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .clock {
+        margin: 0 20px;
+        padding: 20px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        width: 200px;
+    }
+</style>
 </head>
 <body>
-    <div id="country">Please select a country</div>
-    <button id="changeCountry">Change Country</button>
-    <div id="clock"></div>
 
-    <script>
-        let changeCountry = document.getElementById("changeCountry");
-        let countryList = 3;
-        let index = 0;
-        let country = document.getElementById("country");
-        let clock = document.getElementById("clock");
+<div class="clock-container">
+    <div class="clock" id="delhi"></div>
+    <div class="clock" id="new-york"></div>
+    <div class="clock" id="london"></div>
+</div>
 
-        changeCountry.addEventListener("click", ()=>{
-            if(index % countryList == 0){
-                country.innerText = "America (Los Angeles)";
-                time('America/Los_Angeles');
-            } else if(index % countryList == 1){
-                country.innerText = "China";
-                time('Asia/Shanghai');
-            } else if(index % countryList == 2){
-                country.innerText = "India";
-                time('Asia/Kolkata');
-            }
-            index++;
-        });
+<script>
+function updateClock() {
+    // Delhi Time
+    var delhiTime = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"});
+    document.getElementById("delhi").innerHTML = "Delhi: " + delhiTime;
 
-        function time(timezone){
-            setInterval(()=>{
-                const d = new Date();
-                const options = {timeZone: timezone, hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric'};
-                const formattedTime = new Intl.DateTimeFormat('en-US', options).format(d);
-                clock.innerText = formattedTime;
-            }, 1000);
-        }
-        // Initial call to set the time for the first country
-        time('America/Los_Angeles');
-    </script>
+    // New York Time
+    var newYorkTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+    document.getElementById("new-york").innerHTML = "New York: " + newYorkTime;
+
+    // London Time
+    var londonTime = new Date().toLocaleString("en-US", {timeZone: "Europe/London"});
+    document.getElementById("london").innerHTML = "London: " + londonTime;
+}
+
+// Update every second
+setInterval(updateClock, 1000);
+updateClock(); // Initial call
+</script>
+
 </body>
 </html>
-```
-
-This code sets up the page with three buttons to change the displayed country (America, China, and India), along with their corresponding time zones. The time is displayed in 12-hour format with hours, minutes, and seconds. When you click the "Change Country" button, it cycles through the countries and updates the displayed time accordingly.

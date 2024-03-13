@@ -1,73 +1,37 @@
-let d = new Date();
-let changeCountry = document.getElementById("changeCountry");
-let changeTheme = document.getElementById("changeTheme");
-let countryList = 3;
-let index = 0;
-let country = document.getElementById("country");
-let body = document.body;
+let clock1 = document.getElementById("clock1");
+let clock2 = document.getElementById("clock2");
+let clock3 = document.getElementById("clock3");
 
-changeTheme.addEventListener("click",()=>{
-    if(index%countryList == 0){
-        body.style.backgroundImage = "url(cool-background4.png)"  
-        body.style.backgroundSize = "cover"; 
+let country1 = document.getElementById("country1");
+let country2 = document.getElementById("country2");
+let country3 = document.getElementById("country3");
 
-    }else if(index%countryList == 1){
-        body.style.backgroundImage = "url(cool-background3.png)"
-
-    }else if(index%countryList == 2){
-        body.style.backgroundImage = "url(cool-background2.png)";  }
-        index += 1;
-})
-
-changeCountry.addEventListener("click",()=>{
-    
-    if(index%countryList == 0){
-        country.innerText = "Delhi";
-        d.toLocaleDateString('en-US',{timeZone:'America/Los_Angeles'})
-        time();
-    }else if(index%countryList == 1){
-        country.innerText = "Kolkatta";
-
-    }else if(index%countryList == 2){
-        country.innerText = "Bengalore";
-        time();
-    }
-    index++;
-});
-
-function time(){
-    setInterval(()=>{
-        const d = new Date();
-        hr = d.getHours();
-        min = d.getMinutes();
-        sec = d.getSeconds();
-        if(sec <= 9){
-            sec = "0"+sec;
-        }
-        if(min <= 9){
-            min = "0"+min;
-        }
-        if(hr <= 9){
-            hr = "0"+hr;
-        }
-        clock.innerText = `${hr} : ${min} : ${sec}`;
-    
-    },1000)
+function display(timeZone, clockId, country){
+    let time = new Date().toLocaleString("en-US",{timeZone:timeZone});
+    let t = time.split(" ")[1]+" "+time.split(" ")[2] ;
+    clockId.innerText = t;
 }
-time();
-  
-let options = {
-    timeZone: 'Europe/Paris',
-    year: 'numeric',
-    month:'numeric',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-  },
-  formatter = new Intl.DateTimeFormat([], options);
- 
-// console.log(formatter.format(new Date()));
 
+ setInterval(()=>{
+    display("Asia/Kolkata", clock1, "India");
+    display("America/New_York", clock2, "America");
+    display("Europe/London", clock3, "England");
+    
+},100)
+let i=1;
+setInterval(()=>{
+    document.getElementById("body").style.backgroundImage = `url(cool-background${i%7}.png)`;
+    document.getElementById("body").style.backgroundSize = `cover`;
+    document.getElementById("body").style.transition = `1s`;
+    
+    
+    i++;
+},1000)
 
+// let i=1;
+// let changeTheme = document.getElementById("changeTheme");
+// changeTheme.addEventListener("click",()=>{
+//     document.getElementById("body").style.backgroundImage = `url(cool-background${i%7}.png)`
+//     i++;
+// })
 

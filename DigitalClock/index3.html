@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Clocks</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .clock-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .clock {
+        margin: 0 20px;
+        padding: 20px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        width: 200px;
+    }
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="clock-container">
+    <div class="clock" id="clock1"></div>
+    <div class="clock" id="clock2"></div>
+    <div class="clock" id="clock3"></div>
+</div>
+
+<script>
+function updateClock(timezone, country, clockId) {
+    var time = new Date().toLocaleString("en-US", {timeZone: timezone});
+    document.getElementById(clockId).innerHTML = country + ": " + time;
+}
+
+function changeTimeZone(timezone, country) {
+    updateClock(timezone, country, "clock1");
+    updateClock(timezone, country, "clock2");
+    updateClock(timezone, country, "clock3");
+}
+
+// Initial setup - show Delhi time by default
+changeTimeZone('Asia/Kolkata', 'India');
+
+// Update every second
+setInterval(function() {
+    updateClock('Asia/Kolkata', 'India', "clock1");
+    updateClock('America/New_York', 'America', "clock2");
+    updateClock('Europe/London', 'England', "clock3");
+}, 1000);
+</script>
+
+</body>
+</html>

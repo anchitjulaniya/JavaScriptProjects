@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Clocks</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f1f1f1;
+        background-image: url('https://source.unsplash.com/random');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: #fff;
+    }
+    .clock-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .clock {
+        margin: 0 20px;
+        padding: 20px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        width: 200px;
+        background-color: rgba(0, 0, 0, 0.7);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    .clock h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .clock p {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .analog-clock {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+        border-radius: 50%;
+        position: relative;
+        background: #333;
+    }
+    .hour,
+    .minute,
+    .second {
+        position: absolute;
+        background: #fff;
+        transform-origin: 50% 100%;
+    }
+    .hour {
+        width: 6px;
+        height: 40px;
+        top: 50%;
+        left: 50%;
+        margin-left: -3px;
+        transform: translate(-50%, -100%);
+        z-index: 3;
+    }
+    .minute {
+        width: 4px;
+        height: 50px;
+        top: 50%;
+        left: 50%;
+        margin-left: -2px;
+        transform: translate(-50%, -100%);
+        z-index: 2;
+    }
+    .second {
+        width: 2px;
+        height: 55px;
+        top: 50%;
+        left: 50%;
+        margin-left: -1px;
+        transform: translate(-50%, -100%);
+        z-index: 1;
+        background: #f00;
+    }
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: #555;
+    }
+</style>
+</head>
+<body>
+
+<div class="clock-container">
+    <div class="clock" id="delhi">
+        <h2>Delhi</h2>
+        <p id="delhi-time"></p>
+        <div class="analog-clock" id="delhi-analog"></div>
+    </div>
+    <div class="clock" id="new-york">
+        <h2>New York</h2>
+        <p id="new-york-time"></p>
+        <div class="analog-clock" id="new-york-analog"></div>
+    </div>
+    <div class="clock" id="london">
+        <h2>London</h2>
+        <p id="london-time"></p>
+        <div class="analog-clock" id="london-analog"></div>
+    </div>
+</div>
+
+<button onclick="changeBackground()">Change Background</button>
+
+<script>
+var backgroundIndex = 0;
+var backgrounds = [
+    'https://source.unsplash.com/random',
+    'https://source.unsplash.com/collection/190727/1600x900',
+    'https://source.unsplash.com/collection/5395276/1600x900',
+    'https://source.unsplash.com/collection/2537729/1600x900'
+];
+
+function changeBackground() {
+    backgroundIndex = (backgroundIndex + 1) % backgrounds.length;
+    document.body.style.backgroundImage = "url('" + backgrounds[backgroundIndex] + "')";
+}
+
+function updateClock() {
+    // Delhi Time
+    var delhiTime = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"});
+    document.getElementById("delhi-time").innerHTML = delhiTime;
+    updateAnalogClock(delhiTime, "delhi-analog");
+
+    // New York Time
+    var newYorkTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+    document.getElementById("new-york-time").innerHTML = newYorkTime;
+    updateAnalogClock(newYorkTime, "new-york-analog");
+
+    // London Time
+    var londonTime = new Date().toLocaleString("en-US", {timeZone: "Europe/London"});
+    document.getElementById("london-time").innerHTML = londonTime;
+    updateAnalogClock(londonTime, "london-analog");
+}
+
+function updateAnalogClock(timeString, clockId) {
+    var time = new Date(timeString);
+    var hours = time.getHours();
+    var minutes = time.getMinutes();
+    var seconds = time.getSeconds();
+
+    var hourDeg = (hours % 12) * 30 + minutes * 0.5; // 30 degrees per hour, 0.5 degrees per minute
+    var minuteDeg = minutes * 6; // 6 degrees per minute
+    var secondDeg = seconds * 6; // 6 degrees per second
+
+    var hourHand = document.getElementById(clockId).querySelector(".hour");
+    var minuteHand = document.getElementById(clockId).querySelector(".minute");
+    var secondHand = document.getElementById(clockId).querySelector(".second");
+
+    hourHand.style.transform = "rotate(" + hourDeg + "deg)";
+    minuteHand.style.transform = "rotate(" + minuteDeg + "deg)";
+    secondHand.style.transform = "rotate(" + secondDeg + "deg)";
+}
+
+// Update every second
+setInterval(updateClock, 1000);
+updateClock(); // Initial call
+</script>
+
+</body>
+</html>
