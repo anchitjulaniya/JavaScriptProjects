@@ -22,14 +22,14 @@ changeTheme.addEventListener("click",()=>{
 changeCountry.addEventListener("click",()=>{
     
     if(index%countryList == 0){
-        country.innerText = "America";
+        country.innerText = "Delhi";
         d.toLocaleDateString('en-US',{timeZone:'America/Los_Angeles'})
         time();
     }else if(index%countryList == 1){
-        country.innerText = "China";
+        country.innerText = "Kolkatta";
 
     }else if(index%countryList == 2){
-        country.innerText = "India";
+        country.innerText = "Bengalore";
         time();
     }
     index++;
@@ -67,5 +67,7 @@ let options = {
   },
   formatter = new Intl.DateTimeFormat([], options);
  
-console.log(formatter.format(new Date()));
+// console.log(formatter.format(new Date()));
+
+
 
