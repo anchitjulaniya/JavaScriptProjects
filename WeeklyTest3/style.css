@@ -11,8 +11,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, lightblue, transparent);
     overflow: hidden;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    /* background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%); */
+    /* background: linear-gradient(90deg, #9ebd13 0%, #008552 100%); */
+    /* background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%); */
+    /* background: linear-gradient(to right, #ff6b08, #eedd44); */
+
+
   }
   
   .container {
