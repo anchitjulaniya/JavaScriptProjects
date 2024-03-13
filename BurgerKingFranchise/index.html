@@ -9,13 +9,18 @@
 </head>
 <body class="flex flex-col items-center pt-4">
     <button id="orderButton" class="border border-grey-800 bg-red-300 rounded px-3 py-1 font-semibold">Order Food</button>
-    <div class="flex items-center gap-2 mt-3">
-        <input type="checkbox" name="" id="">
-        <label for="">Burger</label>
-        <input type="checkbox" name="" id="">
-        <label for="">French Fries</label>
-        <input type="checkbox" name="" id="">
-        <label for="">Cold Drink</label>
+    <div id="checkboxContainer" class="flex items-center gap-2 mt-3">
+        <input class="w-[20px] h-[20px] hover:cursor-pointer" type="checkbox" 
+        name="burger" id="burger">
+        <label for="burger" class="mr-3">Burger</label>
+        <input class="w-[20px] h-[20px] hover:cursor-pointer" type="checkbox" name="frenchfries" id="frenchfries">
+        <label for="frenchfries" class="mr-3">French Fries</label>
+        <input class="w-[20px] h-[20px] hover:cursor-pointer" type="checkbox" name="colddrink" id="colddrink">
+        <label for="colddrink" class="mr-3">Cold Drink</label>
     </div>
+
+    <div class="mt-10 text-red-500 font-semibold text-2xl" id="orderNo"></div>
+
+    <div id="imageContainer"></div>
 </body>
 </html>
