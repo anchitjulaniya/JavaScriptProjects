@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search App</title>
+    <link rel="shortcut icon" href="fevicon.png" type="image/x-icon">
+    <style>
+        /* CSS */
+        .button-3 {
+        height: 40px;
+        appearance: none;
+        background-color: #2ea44f;
+        border: 1px solid rgba(27, 31, 35, .15);
+        
+        box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 6px 16px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        white-space: nowrap;
+        }
+
+        .button-3:focus:not(:focus-visible):not(.focus-visible) {
+        box-shadow: none;
+        outline: none;
+        }
+
+        .button-3:hover {
+        background-color: #2c974b;
+        }
+
+        .button-3:focus {
+        box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+        outline: none;
+        }
+
+        .button-3:disabled {
+        background-color: #94d3a2;
+        border-color: rgba(27, 31, 35, .1);
+        color: rgba(255, 255, 255, .8);
+        cursor: default;
+        }
+
+        .button-3:active {
+        background-color: #298e46;
+        box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="flex flex-col items-center pt-10 px-5">
+    <h1 style="color: #287eff;
+    text-shadow: 3px 3px 40px #A8EB12,
+        -2px 1px 50px #A8EB12;" class="text-4xl font-bold">Image Search App</h1>
+    <div style="border-radius: 6px; overflow: hidden;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" class="flex my-16">
+        <input id="SearchBox" class="shadow-2xl h-[40px] w-[390px] px-5 py-3 outline-none  rounded-md" type="text" name="" id="" placeholder="Search for images...">
+        <button id="searchButton" class="flex justify-center items-center gap-1 button-3" role="button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>Search</button>
+    </div>
+    <div id="imageContainer" class="flex flex-wrap gap-6 py-4 border w-full"></div>
+</body>
+</html>

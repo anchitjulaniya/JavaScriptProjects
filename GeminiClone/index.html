@@ -1,0 +1,75 @@
+<!-- text-[rgb(19,19,20)] -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini</title>
+    <link rel="shortcut icon" href="gemini_favicon.png" type="image/x-icon">
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+             display: none;
+            }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-black ">
+    <header class="fixed top-0 left-0 right-0 bg-black z-10 text-[rgb(202,204,206)] font-semibold flex justify-between pt-4 pl-5 pr-4">
+        <div class="left flex justify-start items-center gap-6 md:gap-10">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+            </svg>
+            <span class="flex justify-center items-center text-xl text-[rgb(202,204,206)]">
+                Gemini
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-4 hover:cursor-pointer">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </span>
+        </div>
+
+        <div class="right flex items-center  gap-6 sm:gap-10">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer lg:hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+              </svg>
+             
+              <img class="w-[50px] h-[50px] rounded-full hover:cursor-pointer" src="passport size.png" alt="" sizes="" srcset="">
+        </div>
+    </header>
+
+    <div class="w-full -z-1 flex justify-center pt-[100px] pb-[10px]">
+        <span class="max-w-[850px] text-white flex flex-col items-start ">
+            <h1 class="text-6xl font-semibold" style="background: #5082EE;
+            background: linear-gradient(to right, #5082EE 0%, #A66FBA 50%, #D66675 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;">Hello, Anchit</h1>
+            <h1 class="text-[rgb(68,71,70)] text-6xl font-semibold">How can I help you today?</h1>
+            <div class="w-full flex gap-3 my-10 overflow-x-auto hide-scrollbar">
+                <div class="rounded-2xl min-w-[200px] h-[200px] bg-[rgb(30,31,32)]"></div>
+                <div class="rounded-2xl min-w-[200px] h-[200px] bg-[rgb(30,31,32)]"></div>
+                <div class="rounded-2xl min-w-[200px] h-[200px] bg-[rgb(30,31,32)]"></div>
+                <div class="rounded-2xl min-w-[200px] h-[200px] bg-[rgb(30,31,32)]"></div>
+                
+            </div>
+        </span>
+    </div>
+
+    <footer class="z-2 bg-black fixed left-0 right-0 bottom-0 left-0 right-0w-full pt-2 pb-1">
+        <form action="" class="text-white">
+            <span class="flex mx-auto min-w-[350px] max-w-[830px] w-[95%] rounded-3xl bg-[rgb(30,31,32)] focus:bg-[#444746] justify-center items-center overflow-hidden">
+                <input class="outline-none pl-[24px] h-[56px] bg-transparent w-[85%]" type="text" name="" id="" placeholder="Enter a prompt here">
+                <span class="flex justify-center items-center gap-[24px] font-extrabold pr-[24px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[24px] h-[24px] hover:cursor-pointer">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[24px] h-[24px] hover:cursor-pointer">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+                      </svg>
+                </span>
+                  
+            </span>
+        </form>
+        <p class="text-[rgb(202,204,206)] text-[10px] text-center py-[6px]" >Gemini may display inaccurate info, including about people, so double-check its responses. <u class=" hover:cursor-pointer">Your privacy & Gemini Apps</u></p>
+    </footer>
+</body>
+</html>
