@@ -1,43 +1,46 @@
 let jokeButton = document.getElementById("button-14");
 
 let jokeBox = document.getElementById("jokeBox");
-let loader = document.querySelector(".loader");
+let loaderContainer = document.querySelector(".loaderContainer");
+
 const apiKey = "4kqGcJx8uDXo3XIskcbzokAz7rN8nWJs3PL9Mcll";
-
+jokeBox.style.display = "none";
 const options = {
-    method: "GET",
-    headers: {
-      "X-Api-Key": apiKey,
-    },
-  };
+  method: "GET",
+  headers: {
+    "X-Api-Key": apiKey,
+  },
+};
+
 const apiURL = "https://api.api-ninjas.com/v1/dadjokes?limit=1";
-// loader.style.display = "none";
+// loaderContainer.style.display = "none";
 
-
-jokeButton.addEventListener("click",()=>{
-    async function fetchJoke(){
+jokeButton.addEventListener("click", () => {
+  loaderContainer.style.display = "flex";
+  jokeBox.style.display = "none";
+  async function fetchJoke() {
+    // loaderContainer.style.display = "block";
+    try {
+      jokeButton.disabled = true;
+      // jokeBox.innerText = "updating...";
       
-      loader.style.display = "block";
+      let response = await fetch(apiURL, options);
+      let data = await response.json();
+      // console.log(data);
+      jokeBox.innerText = data[0].joke;
+      jokeButton.disabled = false;
+      jokeBox.style.display = "block";
+      loaderContainer.style.display = "none";
 
-        try{      
-            jokeButton.disabled = true;
-            // jokeBox.innerText = "updating...";
-
-            let response = await fetch(apiURL, options);
-            let data = await response.json();
-            // console.log(data);
-            jokeBox.innerText = data[0].joke;
-            jokeButton.disabled = false;
-
-            loader.style.display = "none";
-
-        }
-        catch(error){
-          console.log(error);
-            jokeButton.disabled = false;
-            jokeBox.innerText = "Something went wrong";
-            loader.style.display = "none";
-        }
+      // loaderContainer.innerText = ""
+    } catch (error) {
+      console.log(error);
+      jokeButton.disabled = false;
+      jokeBox.innerText = "Something went wrong";
+      loaderContainer.style.display = "none";
+      jokeBox.style.display = "block";
     }
-    fetchJoke();
-})
+  }
+  fetchJoke();
+  // loaderContainer.style.display = "none";
+});

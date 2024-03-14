@@ -62,13 +62,18 @@
         #box{
             box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         }
+        .loaderContainer{
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
 
         .loader {
-            display: none;
+           
             font-size: 10px;
             width: 1em;
             height: 1em;
-            border-radius: 50%;
+            /* border-radius: 50%; */
             position: relative;
             text-indent: -9999em;
             animation: mulShdSpin 1.1s infinite ease;
@@ -107,12 +112,12 @@
 </head>
 <body>
     <a href="hindi.html" class="absolute top-6 right-8 text-[#A8EB12] font-bold px-5 py-3 rounded-xl bg-[#051937]">Hindi Jokes</a>
-    <div id="box" class="w-[600px] h-[350px] rounded-2xl flex flex-col items-center">
+    <div id="box" class="relative w-[600px] h-[350px] rounded-2xl flex flex-col items-center">
         <h1 class="text-white text-4xl font-bold pt-6" style="text-shadow: 2px 3px 0px #898999;">Dad Joke Generator</h1>
-        <div id="jokeBox" class="flex justify-center items-center h-[200px] w-[90%] my-3 text-white text-2xl text-center">
-            <div class="loader"></div>
+        <div id="jokeBox" class="flex justify-center content-center h-[200px] w-[90%] pt-10 my-3 text-white text-2xl text-center">
         </div>
-        <button id="button-14" class="button-14 font-semibold" role="button">TELL ME A JOKE</button>
+        <div class="h-[200px] w-[90%] loaderContainer"><div class="loader"></div></div>
+        <button id="button-14" class="button-14 font-semibold absolute bottom-2" role="button">TELL ME A JOKE</button>
 
     </div>
     <!--  -->
