@@ -21,7 +21,7 @@ async function run() {
 
 // adding style to displayContainer
   displayContainer.style.alignItems = "start";
-  displayContainer.style.paddingLeft = "20px";
+//   displayContainer.style.paddingLeft = "20px";
 
 
   //   creating user div and attaching msg
