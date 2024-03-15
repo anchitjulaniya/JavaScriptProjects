@@ -43,7 +43,9 @@ async function run() {
 
     
   console.log(text);
-  //   creating Bot div and attaching bot answer
+//   creating Bot div and attaching bot answer
+const md = window.markdownit(); // Create a new instance of markdown-it
+
   let divBot = document.createElement("div");
   divBot.style.display = "flex";
   divBot.style.justifyContent = "center";
@@ -55,7 +57,8 @@ async function run() {
   divBot.style.marginBottom = "15px";
   divBot.style.borderRadius = "10px";
   
-  divBot.innerText = text;
+  divBot.innerText = md.render(text) ;
+  console.log(md.render(text));
   displayContainer.append(divBot);
 }
 
