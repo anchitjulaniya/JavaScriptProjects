@@ -1,5 +1,7 @@
 const searchButton = document.getElementById("searchButton");
 
+const showMoreBtn = document.getElementById("showMoreBtn");
+
 const SearchBox = document.getElementById("SearchBox");
 
 const imageContainer = document.getElementById("imageContainer");
@@ -17,12 +19,11 @@ searchButton.addEventListener("click",(e)=>{
     imageSearch();
 })
 
-
 let animate = ["animate__bounceInLeft","animate__bounceIn","animate__bounceInRight"]
 
 async function imageSearch(){
     inputData = SearchBox.value;
-    // console.log(inputData);
+
     const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey}`;
     
     let response = await fetch(url);
@@ -30,7 +31,9 @@ async function imageSearch(){
     let result = data.results
     console.log(result);
     SearchBox.value = "";
-    imageContainer.innerText = "";
+
+    if(page === 1){imageContainer.innerText = "";}
+
     result.map((result,index)=>{
         // console.log(result.urls.small);
         let imgWrapper  = document.createElement("div");
@@ -75,9 +78,19 @@ async function imageSearch(){
         
         imageContainer.append(imgWrapper);
         // imageContainer.style.boxShadow = " 1px 0 6px #ffea63;";
+        // console.log(page);
     })
+    page++;
+    if(page > 1){
+        showMoreBtn.style.display = "inline-block"
+    }
 
 }
+
+showMoreBtn.addEventListener("click",()=>{
+    SearchBox.value = inputData; 
+    imageSearch();
+})
 
 
 

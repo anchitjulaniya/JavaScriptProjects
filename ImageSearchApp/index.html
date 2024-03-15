@@ -65,6 +65,7 @@
 
 /* CSS */
         .linkBtn {
+        
         padding: 0.6em 2em;
         border: none;
         outline: none;
@@ -77,6 +78,7 @@
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
+        
         }
 
         .linkBtn:before {
@@ -200,6 +202,80 @@
         top: 0;
         border-radius: 10px;
         }
+
+  
+
+
+/* CSS  show more button */
+        .showMoreBtn {
+        display: none;
+        /* position: absolute;
+        bottom: 10px; */
+        
+
+        appearance: button;
+        background-color: #1899D6;
+        border: solid transparent;
+        border-radius: 16px;
+        border-width: 0 0 4px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        
+        font-family: din-round,sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: .8px;
+        line-height: 20px;
+        margin: 0;
+        outline: none;
+        overflow: visible;
+        padding: 13px 16px;
+        text-align: center;
+        text-transform: uppercase;
+        touch-action: manipulation;
+        transform: translateZ(0);
+        transition: filter .2s;
+        user-select: none;
+        -webkit-user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        width: 200px;
+        }
+
+        .showMoreBtn:after {
+        background-clip: padding-box;
+        background-color: #1CB0F6;
+        border: solid transparent;
+        border-radius: 16px;
+        border-width: 0 0 4px;
+        bottom: -4px;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        }
+
+        .showMoreBtn:main,
+        .showMoreBtn:focus {
+        user-select: auto;
+        }
+
+        .showMoreBtn:hover:not(:disabled) {
+        filter: brightness(1.1);
+        -webkit-filter: brightness(1.1);
+        }
+
+        .showMoreBtn:disabled {
+        cursor: auto;
+        }
+
+        .showMoreBtn:active {
+        border-width: 4px 0 0;
+        background: none;
+        }
     </style>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -209,7 +285,7 @@
   />
     <script src="script.js" defer></script>
 </head>
-<body class="bg-black flex flex-col items-center  px-5">
+<body class="bg-black flex flex-col items-center  px-5 pb-2">
     <header class="bg-black w-full pt-10 z-10 fixed top-0 left-0 right-0 flex flex-col items-center">
         <h1 style="color: #287eff;
     text-shadow: 3px 3px 40px #A8EB12,
@@ -222,5 +298,6 @@
     </div>
     </header>
     <div id="imageContainer" class="flex justify-center flex-wrap mt-[177px] gap-8 py-4 w-full"></div>
+<button id="showMoreBtn" class="showMoreBtn" role="button">Show More</button>
 </body>
 </html>
