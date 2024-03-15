@@ -2,6 +2,7 @@ const searchBox = document.getElementById("searchBox");
 const searchBtn = document.getElementById("searchBtn");
 let displayContainer = document.getElementById("displayContainer");
 let count =1;
+const formElement = document.getElementById("formElement");
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
     const API_KEY = "AIzaSyBIEScln1EtBCi61VYNPaogJ8U7Fe-LFEA";
@@ -26,7 +27,7 @@ async function run() {
   divUser.style.padding = "10px 20px";
   divUser.style.marginTop = "5px";
   divUser.style.borderRadius = "10px";
-
+  divUser.classList.add("animate__animated", "animate__bounceIn");
   displayContainer.append(divUser);
   
   searchBox.value = "" ;
@@ -60,6 +61,10 @@ const md = window.markdownit(); // Create a new instance of markdown-it
   divBot.innerText = md.render(text) ;
   console.log(md.render(text));
   displayContainer.append(divBot);
+
+//--------auto scroll to the current div
+   let divBotheight = Number(divBot.clientHeight);
+    window.scrollTo(0,divBotheight);
 }
 
 // search Button click event 
@@ -71,18 +76,15 @@ searchBtn.addEventListener("click",(e)=>{
     }
     run();
 })
+formElement.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    if(count === 1){
+        displayContainer.innerText = "";  
+        count++;
+    }
+    run();
+})
 
-// searchBox.addEventListener("keydown",(e)=>{
-//     e.preventDefault();
-    // console.log(typeof e.key);
-    // if(e.key === "Enter"){
-    //     if(count === 1){
-    //         displayContainer.innerText = "";  
-    //         count++;
-    //     }
-    //     run();  
-    // }
-// })
 
 let geminiBox = document.getElementById("geminiBox");
 let geminBoxContainer = document.getElementById("geminBoxContainer");
@@ -101,7 +103,7 @@ geminiBox.addEventListener("click",()=>{
 
 
 
-let apiKey = "AIzaSyBIEScln1EtBCi61VYNPaogJ8U7Fe-LFEA";
+// let apiKey = "AIzaSyBIEScln1EtBCi61VYNPaogJ8U7Fe-LFEA";
 
 
 

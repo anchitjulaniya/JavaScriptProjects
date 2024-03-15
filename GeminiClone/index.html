@@ -9,7 +9,14 @@
         .hide-scrollbar::-webkit-scrollbar {
              display: none;
         }
+        body{
+            scroll-behavior: smooth;
+        }
     </style>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <script src="https://cdn.tailwindcss.com"></script>
    
 </head>
@@ -80,7 +87,7 @@
     </div>
 
     <footer class="z-2 bg-black fixed left-0 right-0 bottom-0 left-0 right-0w-full pt-2 pb-1">
-        <form action="" class="text-white">
+        <form id="formElement" action="" class="text-white">
             <span class="flex mx-auto min-w-[350px] max-w-[830px] w-[95%] rounded-3xl bg-[rgb(30,31,32)] focus:bg-[#444746] justify-center items-center overflow-hidden">
                 <input class="outline-none pl-[24px] h-[56px] bg-transparent w-[85%]" type="text" name="" id="searchBox" placeholder="Enter a prompt here">
                 <span class="flex justify-center items-center gap-[24px] font-extrabold pr-[24px]">
