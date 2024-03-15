@@ -13,5 +13,5 @@
 12. [CLock](https://anchitjulaniya.github.io/JavaScriptProjects/DigitalClock/)
 13. [Burger King Franchise](https://anchitjulaniya.github.io/JavaScriptProjects/BurgerKingFranchise/)
 14. [Dad Jokes Generator](https://anchitjulaniya.github.io/JavaScriptProjects/DadJokesGenerator/)
-15. [Image Search App]()
+15. [Image Search App](https://anchitjulaniya.github.io/JavaScriptProjects/ImageSearchApp/)
 16. [Gemini Clone](https://anchitjulaniya.github.io/JavaScriptProjects/GeminiClone/)
