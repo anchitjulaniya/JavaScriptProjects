@@ -9,19 +9,10 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 // Access your API key (see "Set up your API key" above)
 const genAI = new GoogleGenerativeAI(API_KEY);
 
+
 async function run() {
-  // For text-only input, use the gemini-pro model
-  const model = genAI.getGenerativeModel({ model: "gemini-pro"});
-
-  const prompt = searchBox.value;
-  
-  const result = await model.generateContent(prompt);
-  const response = await result.response;
-  const text = response.text();
-
-// adding style to displayContainer
+    // adding style to displayContainer
   displayContainer.style.alignItems = "start";
-//   displayContainer.style.paddingLeft = "20px";
 
 
   //   creating user div and attaching msg
@@ -38,6 +29,18 @@ async function run() {
 
   displayContainer.append(divUser);
   
+  searchBox.value = "" ;
+
+  // For text-only input, use the gemini-pro model
+  const model = genAI.getGenerativeModel({ model: "gemini-pro"});
+
+  const prompt = searchBox.value;
+  
+  const result = await model.generateContent(prompt);
+  const response = await result.response;
+  const text = response.text();
+  
+
     
   console.log(text);
   //   creating Bot div and attaching bot answer
