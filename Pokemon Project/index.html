@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="shortcut icon" href="fevicon1.png" type="image/x-icon">
+    <style>
+        /* CSS */
+        .Filter_by_type_Btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6px 14px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+        border-radius: 6px;
+        border: none;
+
+        color: #fff;
+        background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+        background-origin: border-box;
+        box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+
+        .Filter_by_type_Btn:focus {
+        box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+        outline: 0;
+        }
+
+        .Reset {
+            background-color: #c2fbd7;
+            border-radius: 100px;
+            box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+            color: green;
+            cursor: pointer;
+            display: inline-block;
+            font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
+            font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            }
+
+            .Reset:hover {
+            box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+            transform: scale(1.05) rotate(-1deg);
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="scroll-smooth bg-red-500">
+    <header class="w-full flex flex-col items-center items-center">
+        <div class="flex items-center gap-0 sm:-ml-[80px]">
+            <img class="hidden sm:block" src="giphy.gif">
+            <img src="pokemon.png" class="drop-shadow-2xl w-[300px] " alt="">
+            <img class=" h-[100px]" src="ash.webp" alt="" srcset="">
+        </div>
+        <div class="flex flex-wrap justify-center gap-5 mt-[10px]">
+            <button class="Filter_by_type_Btn" role="button">Filter By Type</button>
+
+            <select id="select" class="capitalize outline-none px-1  border-[1px] border-black rounded-lg focus:border-[1.5px]" name="" id="">
+                <option value="">Select</option>
+                <option value="grass">grass</option>
+                <option value="fire">fire</option>
+                <option value="water">water</option>
+                <option value="bug">bug</option>
+                <option value="normal">normal</option>
+                <option value="poison">poison</option>
+                <option value="electric">electric</option>
+                <option value="ground">ground</option>
+                <option value="fairy">fairy</option>
+                <option value="fighting">fighting</option>
+                <option value="psychic">psychic</option>
+                <option value="rock">rock</option>
+                <option value="ghost">ghost</option>
+                <option value="ice">ice</option>
+                <option value="dragon">dragon</option>
+            </select>
+            
+    
+            <input class="px-4 rounded-lg border-[1px] border-black outline-none focus:border-[1.5px] rouded" type="text" name="" id="" placeholder="Search Pokemon">
+            <button class="Reset" role="button">Reset</button>
+        </div>
+    </header>
+    <div id="card_container" class="mt-[20px] w-full py-5 px-10 flex flex-wrap gap-10 justify-center"></div>
+</body>
+</html>
+
+
