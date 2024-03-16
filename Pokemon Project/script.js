@@ -24,13 +24,14 @@ let Typesx = {
 }
 
 async function  run(){
-    for(let num=1; num<=151;num++)
+    for(let num=1; num<=155;num++)
     {
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${num}`);
     let data = await response.json();
-    // console.log(data);
+    console.log(data);
 
     let front_Image_url = data.sprites.other.dream_world.front_default;
+    
     let back_Image_url = data.sprites.back_default
     
     let type1 = data.abilities[0].ability.name; 
@@ -73,17 +74,18 @@ async function  run(){
             <p class="text-black font-semibold rounded-2xl bg-white px-3 py-1">${id}</p>
             <p class="text-[rgb(100,100,100)] bg-white rounded-2xl px-3 text-[10px] py-1">HP<span class="text-[16px] text-black font-semibold"> ${hp}</span></p>
         </div>
-        <img class=" w-[160px] h-[130px] drop-shadow-2xl" src="${front_Image_url}" alt="pokemon_Image">
+        <img class=" w-[160px] h-[130px] drop-shadow-2xl duration-300 hover:scale-125 hover:ease-in-out" src="${front_Image_url}" alt="pokemon_Image">
         <h2 class="text-black font-bold text-center text-xl capitalize">${name}</h2>
 
-        <div class="type flex items-center font-semibold  gap-16 capitalize justify-evenly text-[14px]">
+        <div class="type w-full flex items-center font-semibold  capitalize justify-evenly text-[14px]">
             <p class="px-3 py-1 text-white font-semibold rounded-xl bg-[${bgColor}]">${type1}</p>
             <p class="px-3 py-1 text-white font-semibold rounded-xl bg-[${bgColor}]">${type2}</p>
         </div>
 
-        <div class="flex items-center  justify-evenly items-center  gap-16 text-[11px] text-[rgb(100,100,100)]">
+        <div class="flex items-center  justify-evenly items-center w-full text-[11px] text-[rgb(100,100,100)]">
         <p>Height: <span class=" text-[14px] text-black font-semibold">${height}</span></p>
-        <p>Weight: <span class=" text-[14px] text-black font-semibold">${weight}</span></p></div>
+        <p>Weight: <span class=" text-[14px] text-black font-semibold">${weight}</span></p>
+        </div>
 
     </div>
 
