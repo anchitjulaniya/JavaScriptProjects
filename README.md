@@ -15,4 +15,8 @@
 14. [Dad Jokes Generator](https://anchitjulaniya.github.io/JavaScriptProjects/DadJokesGenerator/)
 15. [Image Search App](https://anchitjulaniya.github.io/JavaScriptProjects/ImageSearchApp/)
 16. [Gemini Clone](https://anchitjulaniya.github.io/JavaScriptProjects/GeminiClone/)
+<<<<<<< HEAD
 17. [Pokemon Project]()
+=======
+17. [Pokemon Project](https://anchitjulaniya.github.io/JavaScriptProjects/Pokemon%20Project/)
+>>>>>>> 99bf59a6966d5082501ae0dda84191111f0e7618
