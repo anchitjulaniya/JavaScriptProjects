@@ -77,8 +77,8 @@ async function  run(){
         <h2 class="text-black font-bold text-center text-xl capitalize">${name}</h2>
 
         <div class="type flex items-center font-semibold  gap-16 capitalize justify-evenly text-[14px]">
-            <p class="px-2 py-1 text-black rounded-lg bg-[${bgColor}]">${type1}</p>
-            <p class="px-2 py-1 text-black rounded-lg bg-[${bgColor}]">${type2}</p>
+            <p class="px-3 py-1 text-white font-semibold rounded-xl bg-[${bgColor}]">${type1}</p>
+            <p class="px-3 py-1 text-white font-semibold rounded-xl bg-[${bgColor}]">${type2}</p>
         </div>
 
         <div class="flex items-center  justify-evenly items-center  gap-16 text-[11px] text-[rgb(100,100,100)]">
