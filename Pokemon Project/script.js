@@ -52,7 +52,7 @@ async function  run(){
     card.style.height = "300px";
     card.style.width = "240px";
     card.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
-    card.classList.add("relative")
+    card.classList.add("relative");    
     card.style.display = "flex";
     card.style.flexDirection = "column";
     card.style.padding = "0px 7px";
@@ -74,7 +74,7 @@ async function  run(){
             <p class="text-black font-semibold rounded-2xl bg-white px-3 py-1">${id}</p>
             <p class="text-[rgb(100,100,100)] bg-white rounded-2xl px-3 text-[10px] py-1">HP<span class="text-[16px] text-black font-semibold"> ${hp}</span></p>
         </div>
-        <img class=" w-[160px] h-[130px] drop-shadow-2xl duration-300 hover:scale-125 hover:ease-in-out" src="${front_Image_url}" alt="pokemon_Image">
+        <img class="hover:cursor-zoom-in w-[160px] h-[130px] drop-shadow-2xl duration-300 hover:scale-125 hover:ease-in-out" src="${front_Image_url}" alt="pokemon_Image">
         <h2 class="text-black font-bold text-center text-xl capitalize">${name}</h2>
 
         <div class="type w-full flex items-center font-semibold  capitalize justify-evenly text-[14px]">

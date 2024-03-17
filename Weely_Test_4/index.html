@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Test 4</title>
+    <link rel="shortcut icon" href="technology.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+    <style>
+            body{
+                scroll-behavior: smooth;
+            }
+            .BuyNowBtn {
+                
+                appearance: button;
+                backface-visibility: hidden;
+                background-color: #405cf5;
+                border-radius: 10px;
+                border-width: 0;
+                box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+                box-sizing: border-box;
+                color: #fff;
+                cursor: pointer;
+                font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+                font-size: 100%;
+                height: 44px;
+                line-height: 1.15;
+                margin: 12px 0 0;
+                outline: none;
+                overflow: hidden;
+                padding: 0 25px;
+                position: relative;
+                text-align: center;
+                text-transform: none;
+                transform: translateZ(0);
+                transition: all .2s,box-shadow .08s ease-in;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                width: 120px;
+            }
+            .BuyNowBtn:hover{
+                text-shadow: rgb(255, 255, 255) 1px 0 5px;
+                box-shadow: rgb(100,25,230) 0px 0px 25px;                
+            }
+
+            .BuyNowBtn:disabled {
+            cursor: default;
+            }
+
+            .BuyNowBtn:focus {
+            box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+            }
+
+            .SearchBtn {
+            appearance: button;
+            background-color: #1899D6;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: din-round,sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            line-height: 20px;
+            margin: 0;
+            outline: none;
+            overflow: visible;
+            padding: 13px 16px;
+            text-align: center;
+            text-transform: uppercase;
+            touch-action: manipulation;
+            transform: translateZ(0);
+            transition: filter .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            width: 180px;
+            }
+
+            .SearchBtn:after {
+            background-clip: padding-box;
+            background-color: #1CB0F6;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            bottom: -4px;
+            content: "";
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            }
+
+            .SearchBtn:main,
+            .SearchBtn:focus {
+            user-select: auto;
+            }
+
+            .SearchBtn:hover:not(:disabled) {
+            filter: brightness(1.1);
+            -webkit-filter: brightness(1.1);
+            }
+
+            .SearchBtn:disabled {
+            cursor: auto;
+            }
+
+            .SearchBtn:active {
+            border-width: 4px 0 0;
+            background: none;
+            }
+
+            /* ---showMore Button--------- */
+            .showMore {
+            appearance: button;
+            background-color: #1899D6;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: din-round,sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            line-height: 20px;
+            margin: 0;
+            outline: none;
+            overflow: visible;
+            padding: 13px 16px;
+            text-align: center;
+            text-transform: uppercase;
+            touch-action: manipulation;
+            transform: translateZ(0);
+            transition: filter .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            width: 180px;
+            }
+
+            .showMore:after {
+            background-clip: padding-box;
+            background-color: #1CB0F6;
+            border: solid transparent;
+            border-radius: 16px;
+            border-width: 0 0 4px;
+            bottom: -4px;
+            content: "";
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            }
+
+            .showMore:main,
+            .showMore:focus {
+            user-select: auto;
+            }
+
+            .showMore:hover:not(:disabled) {
+            filter: brightness(1.1);
+            -webkit-filter: brightness(1.1);
+            }
+
+            .showMore:disabled {
+            cursor: auto;
+            }
+
+            .showMore:active {
+            border-width: 4px 0 0;
+            background: none;
+            }
+            
+        
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</head>
+<body class="bg-black text-white">
+    <header class="flex px-8 md:px-16 mb-3 py-8 justify-between">
+        <h2>Hot Gadgets</h2>
+        <button style="text-shadow: rgb(255, 255, 255) 1px 0 2px;" class="bg-purple-500 text-white px-4 py-2  rounded-xl">SIGN UP</button>
+    </header>
+    <div class="flex flex-col px-8 items-center gap-4">
+        <p>upcoming</p>
+        <h1 style="text-shadow: rgb(255, 255, 255) 0px 0 8px;" class="text-center text-6xl font-bold">Apple Iphone 16 Pro</h1>
+        <p class="text-center px-10">There are many variations of passages of Lorem Ipsum available, but the majority
+        have suffered alteration in some form, by injected humou.</p>
+
+        <button  class="BuyNowBtn" role="button">Buy Now</button>
+    </div>
+
+    <div class="flex flex-wrap justify-center">
+        <img class="my-10 h-[300px] sm:h-[400px] md:h-[500px] " src="iphone15pro_allcolors.jpg" alt="" srcset="">
+        <!-- <img src="iphone15pro_1.jpg" alt="" srcset="">
+        <img src="iphone15pro_2.jpg" alt="" srcset="">
+        <img src="iphone15pro_4.jpg" alt="" srcset=""> -->
+    </div>
+
+    <div class="flex flex-col items-center mb-20">
+        <h2 class=" text-3xl font-bold my-4">Search Your Phone</h2>
+        <span class="flex gap-6 py-2">
+            <input id="inputBox" class="rounded-xl w-[300px] sm:w-[400px] md:w-[500px] px-6 text-black" type="text" name="" id="" placeholder="eg- oppo, iphone, samsung Phone">
+            <button id="searchBtn" class="SearchBtn" role="button">Search</button>
+        </span>
+    </div>
+    <div id="mobile_Container" class="flex justify-center flex-wrap gap-20 text-white py-8">
+    </div>
+    
+    <div class="flex justify-center px-16">
+        <button id="showMore" class="showMore hidden" role="button">Show More</button>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
