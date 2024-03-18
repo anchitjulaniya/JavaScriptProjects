@@ -1,7 +1,9 @@
 let card_container = document.getElementById("card_container");
 
 let select = document.getElementById("select");
+let Filter_by_type_Btn = document.getElementById("Filter_by_type_Btn");
 
+//typex object --->  key as type value as color
 let Typesx = {
     bug: "#26de81",
   dragon: "#ffeaa7",
@@ -22,14 +24,25 @@ let Typesx = {
   water: "#0190FF",
   steel: "#71797E"
 }
+let objects = [];
 
-async function  run(){
+async function run(){
+    // card_container.innerText = "";
     for(let num=1; num<=155;num++)
     {
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${num}`);
     let data = await response.json();
-    console.log(data);
+    // console.log(data);
+    objects.push(data);
+    
+    createPokemonCard(data);
+    
+    }
+}
 
+// create pokemon card function
+function createPokemonCard(data){
+    console.log(data);
     let front_Image_url = data.sprites.other.dream_world.front_default;
     
     let back_Image_url = data.sprites.back_default
@@ -66,8 +79,9 @@ async function  run(){
     }else if(Number(id)<=99){
         id = "#0"+id;
     }else if(Number(id)<=999){
-        id = "#0"+id;
+        id = "#"+id;
     }
+
     card.innerHTML = `
     <div class= "flex justify-center items-center w-full h-full flex-col py-3 px-[7px] gap-[10px] rounded-lg z-10 ">
         <div class="flex gap-16 items-center">
@@ -86,21 +100,47 @@ async function  run(){
         <p>Height: <span class=" text-[14px] text-black font-semibold">${height}</span></p>
         <p>Weight: <span class=" text-[14px] text-black font-semibold">${weight}</span></p>
         </div>
-
     </div>
 
     <div class="absolute -left-[20px] -top-[150px] drop-shadow-xl rounded-full -z-3 bg-[${bgColor}]  w-[280px] h-[280px]"></div>
     `
-
-    card_container.append(card);
     
-    }
+    card_container.append(card);
 }
 run();
 
 
+// filter function for filtering data
+function filterFunction(){
+    let filterObjectData =  objects.filter((value)=>{
+        return value.types[0].type.name.includes(select.value);
+
+    })
+    // console.log(filterObjectData);
+    card_container.innerText = "";
+    filterObjectData.forEach((value)=>{
+        createPokemonCard(value);
+    });
+    // 
+}
+
+Filter_by_type_Btn.addEventListener("click",()=>{
+    filterFunction();
+   
+})
 
 
+let reset = document.getElementById("reset");
+reset.addEventListener("click",()=>{
+    run();
+})
+
+
+let searchBox = document.getElementById("searchBox");
+
+// searchBox.addEventListener("keydown",()=>{
+//     let inputValue = 
+// })
 
 
 

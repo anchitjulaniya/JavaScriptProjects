@@ -12,27 +12,97 @@
         body{
             scroll-behavior: smooth;
         }
+        .rotate-center {
+	        -webkit-animation: rotate-center 2.5s ease-in-out 3 both;
+	        animation: rotate-center 2.5s ease-in-out 3 both;
+        }
+    
+        @-webkit-keyframes rotate-center {
+            0% {
+                -webkit-transform: rotate(0);
+                        transform: rotate(0);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg);
+            }
+            }
+            @keyframes rotate-center {
+            0% {
+                -webkit-transform: rotate(0);
+                        transform: rotate(0);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg);
+            }
+        }
+
     </style>
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://cdn.tailwindcss.com"></script>
    
 </head>
 <body class="bg-black ">
+    <!-- left-header -->
+  <div id="left_header_container" class=" px-3 hidden md:flex flex-col duration-1000 transition-all justify-between  text-white py-6 fixed top-0 left-0 z-20 w-[200px] h-[100vh] bg-[rgb(30,31,32)] hover:cursor-pointer">
+    
+        <div class="flex flex-col">
+            <!--Hamburger icon  -->
+            <div class="w-full">
+                <span id="left_header" class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full hover:bg-[rgb(68,71,70)] ">
+                    menu
+                </span>
+    
+            </div>
+        <!-- plus icon -->
+            <div class="flex gap-2 
+              text-[14px] mt-[60px] rounded-full bg-[rgb(40,42,44)]  hover:cursor-pointer p-[10px] ">
+                <span class=" material-symbols-outlined ">
+                    add
+                </span>
+                <span class="  wider_left_header_content">New chat</span>
+            </div>
+        </div>
+        
+    <div class="flex flex-col gap-0">
+     <!-- Help icon -->
+       <div class="flex  items-center hover:cursor-pointer hover:bg-[rgb(68,71,70)] rounded-3xl ">     
+            <span class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full ">
+                 help
+            </span>
+            <span class="p-[10px] wider_left_header_content ">Help</span>
+        </div>    
+      <!-- History icon -->
+        <div class="flex  items-center hover:cursor-pointer hover:bg-[rgb(68,71,70)] rounded-3xl ">
+                <span class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full hover:bg-[rgb(68,71,70)]">
+                    history
+                </span>
+                <span class="p-[10px] wider_left_header_content ">Activity</span>
+            </div>    
+            <!-- settings icon -->
+            <div class="flex  items-center hover:cursor-pointer hover:bg-[rgb(68,71,70)] rounded-3xl ">
+                <span class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full hover:bg-[rgb(68,71,70)]">
+                    settings
+                </span><span class="p-[10px] wider_left_header_content ">Settings</span>
+            </div>
+    </div>
+  </div>
+    <!-- header -->
     <header class="fixed top-0 left-0 right-0 bg-black z-10 text-[rgb(202,204,206)] font-semibold flex justify-between pt-4 pl-5 pr-4">
         <div class="left flex justify-start items-center gap-6 md:gap-10">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-            </svg>
-            <button id="geminiBox" class="flex justify-center items-center text-xl text-[rgb(202,204,206)] widest hover:cursor-pointer">
+            <span id="left_header" class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full hover:bg-[rgb(68,71,70)] ">
+                menu
+                </span>
+            <button id="geminiBox" class="md:ml-[120px] lg:ml-[0px] flex justify-center items-center text-xl text-[rgb(202,204,206)] widest hover:cursor-pointer">
                 Gemini
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-4 hover:cursor-pointer">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                 </svg>
             </button>
-            <div id="geminBoxContainer" class="bg-[rgb(40,42,44)] hidden absolute z-11 top-[55px] left-[65px] lg:left-[80px] overflow-hidden rounded-xl text-[12px]">
+            <div id="geminBoxContainer" class="bg-[rgb(40,42,44)] hidden absolute z-11 top-[55px] left-[75px] lg:left-[100px] overflow-hidden rounded-xl text-[12px]">
                 <div class="flex flex-col">
                     <span class=" flex items-center justify-between px-3 bg-[rgb(40,42,44)]  w-[230px] h-[60px] py-2 px-4 hover:cursor-pointer hover:bg-[rgb(68,71,70)]" >
                         <div class="flex text-white gap-3"><img class="h-[20px] w-[20px]" src="gemini_favicon.png" alt=""> Gemini</div>
@@ -49,7 +119,7 @@
             </div>
         </div>
 
-        <div class="right flex items-center  gap-6 sm:gap-10">
+        <div class="right flex items-center       gap-6 sm:gap-10">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer lg:hidden">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
               </svg>
@@ -59,7 +129,8 @@
 
     </header>
 
-    <div class=" w-full  -z-1 flex  justify-center pt-[100px] pb-[120px]">
+    <!-- center div -->
+    <div class=" w-full -z-1 flex lg:ml-[2%] justify-center pt-[100px] pb-[120px]">
         <span id="displayContainer" class=" sm:w-[635px] lg:w-[800px] text-white flex flex-col items-start ">
             <h1 class="text-6xl font-semibold" style="background: #5082EE;
             background: linear-gradient(to right, #5082EE 0%, #A66FBA 50%, #D66675 100%);
@@ -86,9 +157,10 @@
         </span>
     </div>
 
-    <footer class="z-2 bg-black fixed left-0 right-0 bottom-0 left-0 right-0w-full pt-2 pb-1">
+    <!--footer search box  -->
+    <footer class="z-30  fixed left-0 right-0 bottom-0 left-0 right-0 w-full lg:w-[95%] lg:ml-[5%] pt-2 pb-1">
         <form id="formElement" action="" class="text-white">
-            <span class="flex mx-auto min-w-[350px] max-w-[830px] w-[95%] rounded-3xl bg-[rgb(30,31,32)] focus:bg-[#444746] justify-center items-center overflow-hidden">
+            <span style="box-shadow: 0 0 10px black;" class="flex mx-auto min-w-[350px] max-w-[830px] w-[95%] rounded-3xl bg-[rgb(30,31,32)] focus:bg-[#444746] justify-center items-center overflow-hidden">
                 <input class="outline-none pl-[24px] h-[56px] bg-transparent w-[85%]" type="text" name="" id="searchBox" placeholder="Enter a prompt here">
                 <span class="flex justify-center items-center gap-[24px] font-extrabold pr-[24px]">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[24px] h-[24px] hover:cursor-pointer">
@@ -106,6 +178,8 @@
         </form>
         <p class="text-[rgb(202,204,206)] text-[10px] text-center py-[6px]" >Gemini may display inaccurate info, including about people, so double-check its responses. <u class=" hover:cursor-pointer">Your privacy & Gemini Apps</u></p>
     </footer>
+
+    <!-- Api -->
     <script type="importmap">
         {
           "imports": {
@@ -113,7 +187,13 @@
           }
         }
       </script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">  
+      </script>
+
       <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+     
+      <!-- attaching script file with html file -->
       <script src="script.js" type="module"></script>
 </body>
 </html>
