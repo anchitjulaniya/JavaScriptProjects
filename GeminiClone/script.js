@@ -120,19 +120,23 @@ let left_header_container_width  = left_header_container.style.width;
 
 let wider_left_header_content = document.querySelectorAll(".wider_left_header_content");
 
-let left_header_flag = false;
+let left_header_flag = true;
 left_header.addEventListener("click",()=>{
     if(!left_header_flag){
         left_header_container.style.width = "200px"
+        
         setTimeout(()=>{
         wider_left_header_content.forEach(element => {
             element.style.display = "block";
+            
         });
         
-       },1200);
+       },1050);
+       geminiBox.style.marginLeft = "200px"
 
         left_header_flag = true;
     }else{
+        geminiBox.style.marginLeft = "110px"
             left_header_container.style.width = "70px"
             wider_left_header_content.forEach(element => {
             element.style.display = "none";
