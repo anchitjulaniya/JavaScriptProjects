@@ -14,6 +14,7 @@ searchBtn.addEventListener("click",()=>{
     
     run();
 })
+
 async function run(){
     let respose = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`);
     let data = await respose.json();
@@ -39,7 +40,7 @@ async function run(){
         <img class="mt-[20px] w-[250px]" src="${mobile.image}">
         <h2 class="">${mobile.brand} ${mobile.phone_name}</h2>
         <p class="px-4 text-white text-center">There are many variations of passages of available, but the majority have suffered</p>
-        <button onclick="showbtn()" style="text-shadow: rgb(255, 255, 255) 0px 0 8px;" id="showDetailBtn" class="px-4 py-2 rounded-xl bg-[rgb(100,25,230)] text-white">SHOW DETAILS<button>
+        <button style="text-shadow: rgb(255, 255, 255) 0px 0 8px;" id="showDetailBtn" class="px-4 py-2 rounded-xl bg-[rgb(100,25,230)] text-white">SHOW DETAILS<button>
         `;
         // console.log(data.data[i].image,data.data[1].brand,data.data[i].phone_name);
         mobile_Container.append(mobile_card);     
@@ -50,9 +51,31 @@ async function run(){
 run();
 });
 
+// show button function
 function showbtn(e){
     let showDetailBtn = document.querySelectorAll("#showDetailBtn");
-    console.log(showDetailBtn);
+// creating div card
+    let div_container = document.createElement("div");
+    div_container.style.height = "100vh";
+    div_container.style.width = "100%";
+    div_container.style.display = "flex";
+    div_container.style.justifyContent = "center";
+    div_container.style.alignItems = "center";
+    
+    div_container.innerHTML = `
+    <div class="w-[425px] h-[570px] flex flex-col items-center gap-3">
+        <img src="Image_url" class="w-[160px] h-[212px]">
+        <h2 class="text-center">Mobile_Name</h2>
+        <h3 class="text-center">Brand_Name</h3>
+        
+        <p class="text-center">details</p>
+        <p class="text-center">Release__Date</p>
+        <button class="bg-red-600 px-4 py-2 rounded-lg ">Close</button>
+        
+    
+
+    </div>` 
+    // console.log(showDetailBtn);
 }
 
 
