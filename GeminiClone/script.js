@@ -132,11 +132,11 @@ left_header.addEventListener("click",()=>{
         });
         
        },1050);
-       geminiBox.style.marginLeft = "200px"
+       geminiBox.style.marginLeft = "150px"
 
         left_header_flag = true;
     }else{
-        geminiBox.style.marginLeft = "110px"
+        geminiBox.style.marginLeft = "20px"
             left_header_container.style.width = "70px"
             wider_left_header_content.forEach(element => {
             element.style.display = "none";
