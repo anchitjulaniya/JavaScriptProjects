@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+    <link rel="shortcut icon" href="signup.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[rgb(221,229,244)]  flex h-[100vh] justify-center items-center">
+    <form action="./log_in.html" id="signUp" class="bg-[rgb(241,247,254)]  p-8 rounded-2xl shadow-2xl w-[380px] h-[523px] flex flex-col justify-between">
+            <div class="gap-3 flex flex-col ">
+                <span class="flex gap-14">               
+                    <a href="./sign_up.html" style="filter: drop-shadow(0 0 18px rgb(52,69,99));" class="  text-3xl font-bold drop-shadow-lg text-[rgb(52,69,99)]">Sign Up</a><br>
+
+                    <!-- -->
+
+                </span><br>
+        <span class="flex gap-2">
+            <input type="text" name="FirstName" placeholder="First Name" class="w-[50%] outline-none border-[1px] border-black px-3 rounded-lg h-[45px]">
+            <input type="text" name="LastName"  placeholder="Last Name" class="w-[50%] outline-none border-[1px] border-black px-3 rounded-lg h-[45px]">
+        </span>
+            <input type="text" name="Email"  placeholder="Email" class="w-[100%] outline-none border-[1px] border-black px-3 rounded-lg h-[45px]">
+        <span class="flex gap-2">
+            <input type="password" name="password"  placeholder="Password" class="w-[50%] outline-none border-[1px] border-black px-3 rounded-lg h-[45px]">
+            <input type="password" name="confirmPassword" placeholder="Confirm-Password" class="w-[50%] outline-none border-[1px] border-black px-3 rounded-lg h-[45px]">
+        </span>
+
+        <span class="flex gap-2">
+            <span class="w-[15%] h-[45px] flex justify-center items-center bg-white rounded-lg border-[1px] border-black">+91</span>
+            <input type="tel" placeholder="Mobile Number" name="phoneNumber" class="w-[85%] outline-none border-[1px] border-black px-3 rounded-lg h-[45px]">
+        </span>
+        <button id="submit" class="rounded-lg border-[bg-green-400] border-[1px] font-semibold hover:bg-green-500 transition-all py-2 bg-green-400 outline-none hover:border-[rgbrgb(52,69,99)]" type="submit" >Submit</button>
+
+        <div class="flex gap-8 items-center">
+            <hr class="h-[1.3px] w-full bg-black"> <p>Or</p>
+            <hr class="h-[1.3px] w-full bg-black">
+        </div>
+    </div>
+    <button class="rounded-lg border-[rgb(52,69,99)] border-[1px] hover:bg-white hover:text-[rgb(52,69,99)] transition-all duration-1000 py-2 text-white font-bold bg-[rgb(52,69,99)] " type="submit" > Continue with Google</button>
+
+    <button href="log_in.html" style= " filter: drop-shadow(0 0 18px rgb(52,69,99));" class="mt-2 text-3xl font-bold drop-shadow-lg text-[rgb(15,99,199)]">Log in</button>
+</form>
+    
+    
+    <script src="sign_up.js"></script>
+</body>
+</html>

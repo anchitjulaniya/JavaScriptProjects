@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in Page</title>
+    <link rel="shortcut icon" href="login.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[rgb(221,229,244)]  flex h-[100vh] justify-center items-center">
+    <form id="login" action="" class="bg-[rgb(241,247,254)]  p-8 rounded-2xl shadow-2xl w-[380px] h-[480px] flex flex-col justify-between">
+            <div class="gap-3 flex flex-col ">
+                <span class="flex gap-14">
+                    <a href="log_in.html" style="filter: drop-shadow(0 0 18px rgb(52,69,99));" class=" text-3xl font-bold drop-shadow-lg text-[rgb(52,69,99)]">Log in</a>
+
+                    <!-- <br> -->
+
+                </span><br>
+        
+            <input type="text" name="email"  placeholder="Email" class="w-[100%] outline-none border-[1px] border-black px-3 rounded-lg h-[45px]">
+       
+            <input type="password" name="password"  placeholder="Password" class="w-[100%] outline-none border-[1px] border-black px-3 rounded-lg h-[45px]">
+          
+
+       
+        <button id="submit_loginPage" class="rounded-lg border-[bg-green-400] border-[1px] font-semibold hover:bg-green-500 transition-all py-2 bg-green-400 outline-none hover:border-[rgbrgb(52,69,99)]" type="submit" >Submit</button>
+
+        <div class="flex gap-8 items-center">
+            <hr class="h-[1.3px] w-full bg-black"> <p>Or</p>
+            <hr class="h-[1.3px] w-full bg-black">
+        </div>
+    
+    <button class="rounded-lg border-[rgb(52,69,99)] border-[1px] hover:bg-white hover:text-[rgb(52,69,99)] transition-all duration-1000 py-2 text-white font-bold bg-[rgb(52,69,99)] " type="submit" > Continue with Google</button>
+
+    <span class="flex gap-2 justify-center text-[12px] text-[rgb(100,100,100)]">
+        <a class="underline text-[rgb(100,100,100)]" href="">Privacy Policy</a>
+         and 
+        <a class="underline text-[rgb(100,100,100)]" href="">Terms of Service</a>
+    </span>
+    <button onclick= `window.location.href = "sign_up.html"` style="filter: drop-shadow(0 0 18px rgb(12,89,99));" class="mt-2  text-3xl font-bold drop-shadow-lg text-[rgb(12,79,99)]">Sign Up</button>
+</form>
+
+    
+    <script src="log_in.js"></script>
+</body>
+</html>
