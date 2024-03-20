@@ -17,3 +17,4 @@
 16. [Gemini Clone](https://anchitjulaniya.github.io/JavaScriptProjects/GeminiClone/)
 17. [Pokemon Project](https://anchitjulaniya.github.io/JavaScriptProjects/Pokemon%20Project/)
 18. [Phone Hunting API](https://anchitjulaniya.github.io/JavaScriptProjects/Weely_Test_4/)
+19. [Local Storage Project](https://anchitjulaniya.github.io/JavaScriptProjects/LocalStorageProject/)
