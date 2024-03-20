@@ -16,5 +16,7 @@
 15. [Image Search App](https://anchitjulaniya.github.io/JavaScriptProjects/ImageSearchApp/)
 16. [Gemini Clone](https://anchitjulaniya.github.io/JavaScriptProjects/GeminiClone/)
 17. [Pokemon Project](https://anchitjulaniya.github.io/JavaScriptProjects/Pokemon%20Project/)
-18. [Phone Hunting API](https://anchitjulaniya.github.io/JavaScriptProjects/Weely_Test_4/)
+18. [Phone Hunting API or Weekly test 4](https://anchitjulaniya.github.io/JavaScriptProjects/Weely_Test_4/)
 19. [Local Storage Project](https://anchitjulaniya.github.io/JavaScriptProjects/LocalStorageProject/)
+20. [Card project](https://anchitjulaniya.github.io/JavaScriptProjects/CardProject/)
+21. [Login SignUp Page Project](https://anchitjulaniya.github.io/JavaScriptProjects/Login_SignUp_Page/)
