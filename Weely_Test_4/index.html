@@ -182,13 +182,23 @@
             border-width: 4px 0 0;
             background: none;
             }
-            
-        
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js"></script>
 </head>
 <body class="bg-black text-white">
+
+    <div id="showBtnContainer" class="hidden w-full h-[100vh] flex justify-center items-center fixed top-0 z-10 bg-[rgba(0,0,0,0.5)]">
+        <div class="px-4 py-2 bg-white  flex items-center flex-col h-[500px] w-[450px] rounded-xl shadow-2xl">
+            <img id="image" src="" class="w-[150px] h-[200px]" alt="">
+            <p class="" id="phoneName"></p>
+            <p id="brandName"></p>
+            <p id="phone_discription"></p>
+            <button class="rounded-xl bg-red-600 text-white font-bold px-4 py-2" id="closeBtn">Close</button>
+            
+        </div>
+    </div>
+
     <header class="flex px-8 md:px-16 mb-3 py-8 justify-between">
        <h2 style="box-shadow : 0 0 30px rgb(100,25,230) ; text-shadow: rgb(255, 255, 255) 0px 0 8px;" class="text-3xl px-6 py-2 rounded-xl">Hot Gadgets</h2>
         <button style="text-shadow: rgb(255, 255, 255) 1px 0 2px; background-color: rgb(100,25,230);" class="bg-purple-500 text-white px-4 py-2  rounded-xl">SIGN UP</button>
@@ -216,13 +226,16 @@
             <button id="searchBtn" class="SearchBtn" role="button">Search</button>
         </span>
     </div>
+
     <div id="mobile_Container" class="flex justify-center flex-wrap gap-20 text-white py-8">
     </div>
+
+    
     
     <div class="flex justify-center px-16">
         <button id="showMore" class="showMore hidden" role="button">Show More</button>
     </div>
-
+    
 </body>
 </html>
 
