@@ -19,4 +19,4 @@
 18. [Phone Hunting API or Weekly test 4](https://anchitjulaniya.github.io/JavaScriptProjects/Weely_Test_4/)
 19. [Local Storage Project](https://anchitjulaniya.github.io/JavaScriptProjects/LocalStorageProject/)
 20. [Card project](https://anchitjulaniya.github.io/JavaScriptProjects/CardProject/)
-21. [Login SignUp Page Project](https://anchitjulaniya.github.io/JavaScriptProjects/Login_SignUp_Page/)
+21. [Login SignUp Page Project](https://anchitjulaniya.github.io/JavaScriptProjects/Login_SignUp_Page/sign_up.html)
