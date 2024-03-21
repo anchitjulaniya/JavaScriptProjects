@@ -160,8 +160,17 @@ left_header.addEventListener("click",()=>{
 
 // let apiKey = "AIzaSyBIEScln1EtBCi61VYNPaogJ8U7Fe-LFEA";
 
+let inputImage = document.getElementById("inputImage");
+let iconInputImageBtn = document.getElementById("iconInputImageBtn");
 
+iconInputImageBtn.addEventListener("click",()=>{
+    inputImage.click();
+})
 
+inputImage.addEventListener("change",()=>{
+    const files = inputImage.files;
+    console.log(files);
+})
 
 
 
