@@ -37,7 +37,9 @@
                         transform: rotate(360deg);
             }
         }
-
+        .fixedBars{
+            /* width: calc(100% - 172px); */
+        }
     </style>
     
     
@@ -47,7 +49,7 @@
 </head>
 <body class="bg-black ">
     <!-- left-header -->
-  <div id="left_header_container" class="px-3 hidden md:flex flex-col duration-1000 transition-all justify-between  text-white py-6 fixed top-0 left-0 z-20 w-[200px] h-[100vh] bg-[rgb(30,31,32)] hover:cursor-pointer">
+  <div id="left_header_container" class="px-3 z-10 hidden md:flex flex-col duration-1000 transition-all justify-between  text-white py-6 fixed top-0 left-0 w-[172px] h-[100vh] bg-[rgb(30,31,32)] hover:cursor-pointer">
     
         <div class="flex flex-col">
             <!--Hamburger icon  -->
@@ -90,95 +92,98 @@
             </div>
     </div>
   </div>
-    <!-- header -->
-    <header class="fixed top-0 left-0 right-0 bg-black z-10 text-[rgb(202,204,206)] font-semibold flex justify-between pt-4 pl-5 pr-4">
-        <div class="left flex justify-start items-center gap-6 md:gap-10">
-            <span id="left_header" class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full hover:bg-[rgb(68,71,70)] ">
-                menu
-                </span>
-            <button id="geminiBox" class="md:ml-[150px] flex justify-center transition-all duration-1000 items-center text-xl text-[rgb(202,204,206)] widest hover:cursor-pointer">
-                Gemini
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-4 hover:cursor-pointer">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
-            </button>
-            <div id="geminBoxContainer" class="bg-[rgb(40,42,44)] hidden absolute z-11 top-[55px] left-[75px] lg:left-[200px] overflow-hidden rounded-xl text-[12px]">
-                <div class="flex flex-col">
-                    <span class=" flex items-center justify-between px-3 bg-[rgb(40,42,44)]  w-[230px] h-[60px] py-2 px-4 hover:cursor-pointer hover:bg-[rgb(68,71,70)]" >
-                        <div class="flex text-white gap-3"><img class="h-[20px] w-[20px]" src="gemini_favicon.png" alt=""> Gemini</div>
-                        <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                          </svg>
-                        </div>
-                    </span>
-                    <span class=" flex justify-between items-center px-3 bg-[rgb(40,42,44)] w-[230px] h-[70px] hover:cursor-pointer" >
-                        <div class="flex gap-3 text-[#878787]"><img class="h-[20px] w-[20px]" src="gemini_favicon.png" alt="">Advanced Gemini</div>
-                        <div class="bg-black rounded-xl flex justify-center items-center text-white px-2 w-[80px] h-[40px]  hover:bg-[rgb(68,71,70)]">Upgrade</div>
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="right flex items-center       gap-6 sm:gap-10">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer lg:hidden">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
-              </svg>
-             
-              <img class="w-[50px] h-[50px] rounded-full hover:cursor-pointer" src="passport size.png" alt="" sizes="" srcset="">
-        </div>
-
-    </header>
-
-    <!-- center div -->
-    <div class="  -z-1 flex lg:ml-[2%] justify-center pt-[100px] pb-[120px]">
-        <span id="displayContainer" class=" sm:w-[635px] lg:w-[800px] text-white flex flex-col items-start ">
-            <h1 class="text-6xl font-semibold" style="background: #5082EE;
-            background: linear-gradient(to right, #5082EE 0%, #A66FBA 50%, #D66675 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;">Hello, Anchit</h1>
-            <h1 class="text-[rgb(68,71,70)] text-6xl font-semibold">How can I help you today?</h1>
-            <div class="w-full flex gap-3 my-10 overflow-x-auto hide-scrollbar">
-                <div class="rounded-2xl relative min-w-[200px] h-[200px] bg-[rgb(59,68,86)] px-3 py-3 hover:cursor-pointer">
-                    Help me find the latest trends
-                    <div class="absolute flex justify-center items-center bottom-[20px] right-[20px]  w-[40px] h-[40px] rounded-full bg-black">
-                        <img class="h-[25px] w-[25px] rounded-full" src="svg2.png" alt="">
+  <!-- right part -->
+  <div id="right" class="w-[88%] fixed right-0 z-10 h-[100vh]">
+        <!-- top header -->
+        <header class="fixedBars fixed  top-0  right-0 bg-black text-[rgb(202,204,206)] font-semibold flex justify-between pt-4 pl-5 pr-4 w-[1268px]">
+            <div class="left flex justify-start items-center gap-6 md:gap-10">
+                <!-- <span id="left_header" class="material-symbols-outlined hover:cursor-pointer p-[10px] rounded-full hover:bg-[rgb(68,71,70)] ">
+                    menu
+                    </span> -->
+                <button id="geminiBox" class=" flex justify-center transition-all duration-1000 items-center text-xl text-[rgb(202,204,206)] widest hover:cursor-pointer">
+                    Gemini
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-4 hover:cursor-pointer">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+                <div id="geminBoxContainer" class="bg-[rgb(40,42,44)] transition-all duration-1000 hidden absolute z-11 top-[55px] left-[15px]  overflow-hidden rounded-xl text-[12px]">
+                    <div class="flex flex-col">
+                        <span class=" flex items-center justify-between px-3 bg-[rgb(40,42,44)]  w-[230px] h-[60px] py-2 px-4 hover:cursor-pointer hover:bg-[rgb(68,71,70)]" >
+                            <div class="flex text-white gap-3"><img class="h-[20px] w-[20px]" src="gemini_favicon.png" alt=""> Gemini</div>
+                            <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                            </div>
+                        </span>
+                        <span class=" flex justify-between items-center px-3 bg-[rgb(40,42,44)] w-[230px] h-[70px] hover:cursor-pointer" >
+                            <div class="flex gap-3 text-[#878787]"><img class="h-[20px] w-[20px]" src="gemini_favicon.png" alt="">Advanced Gemini</div>
+                            <div class="bg-black rounded-xl flex justify-center items-center text-white px-2 w-[80px] h-[40px]  hover:bg-[rgb(68,71,70)]">Upgrade</div>
+                        </span>
                     </div>
                 </div>
-                <div class="rounded-2xl min-w-[200px] h-[200px] bg-[rgb(30,31,32)] px-3 py-3 hover:bg-[rgb(68,71,70)] hover:cursor-pointer">
-                    Help me write a refund email for a product that&apos;s damaged
-                </div>
-                <div class="rounded-2xl min-w-[200px] h-[200px] bg-[rgb(30,31,32)] px-3 py-3 hover:bg-[rgb(68,71,70)] hover:cursor-pointer">
-                    Come up with a product name for a new app
-                </div>
-                <div class="rounded-2xl min-w-[200px] h-[200px] bg-[rgb(30,31,32)] px-3 py-3 hover:bg-[rgb(68,71,70)] hover:cursor-pointer">
-                    Brainstorm a tagline for my online store
-                </div>
             </div>
-        </span>
-    </div>
 
-    <!--footer search box  -->
-    <footer class="z-30  fixed left-0 right-0 bottom-0 left-0 right-0 w-full lg:w-[95%] lg:ml-[5%] pt-2 pb-1">
-        <form id="formElement" action="" class="text-white">
-            <span style="box-shadow: 0 0 10px black;" class="flex mx-auto min-w-[350px] max-w-[830px] w-[95%] rounded-3xl bg-[rgb(30,31,32)] focus:bg-[#444746] justify-center items-center overflow-hidden">
-                <input class="outline-none pl-[24px] h-[56px] bg-transparent w-[85%]" type="text" name="" id="searchBox" placeholder="Enter a prompt here">
-                <span class="flex justify-center items-center gap-[24px] font-extrabold pr-[24px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[24px] h-[24px] hover:cursor-pointer">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                      </svg>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[24px] h-[24px] hover:cursor-pointer">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
-                      </svg>
-                      <svg xmlns="http://www.w3.org/2000/svg" id="searchBtn" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[24px] h-[24px] hover:cursor-pointer">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                      </svg>
-                      
-                </span>
+            <div class="right flex items-center gap-6 sm:gap-10">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer lg:hidden">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                </svg>
+                
+                <img class="w-[50px] h-[50px] rounded-full hover:cursor-pointer" src="passport size.png" alt="" sizes="" srcset="">
+            </div>
+
+        </header>
+
+        <!-- center div -->
+        <div class="flex justify-center pt-[100px] pb-[50px] h-[87vh] overflow-y-scroll scroll-auto">
+            <span id="displayContainer" class=" sm:w-[635px] lg:w-[800px] text-white flex flex-col items-start ">
+                <h1 class="text-6xl font-semibold" style="background: #5082EE;
+                background: linear-gradient(to right, #5082EE 0%, #A66FBA 50%, #D66675 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;">Hello, Anchit</h1>
+                <h1 class="text-[rgb(68,71,70)] text-6xl font-semibold">How can I help you today?</h1>
+                <div class="w-full flex gap-3 my-10 overflow-x-auto hide-scrollbar">
+                    <div class="rounded-2xl relative min-w-[200px] h-[200px] bg-[rgb(59,68,86)] px-3 py-3 hover:cursor-pointer">
+                        Help me find the latest trends
+                        <div class="absolute flex justify-center items-center bottom-[20px] right-[20px]  w-[40px] h-[40px] rounded-full bg-black">
+                            <img class="h-[25px] w-[25px] rounded-full" src="svg2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="rounded-2xl min-w-[200px] h-[200px] bg-[rgb(30,31,32)] px-3 py-3 hover:bg-[rgb(68,71,70)] hover:cursor-pointer">
+                        Help me write a refund email for a product that&apos;s damaged
+                    </div>
+                    <div class="rounded-2xl min-w-[200px] h-[200px] bg-[rgb(30,31,32)] px-3 py-3 hover:bg-[rgb(68,71,70)] hover:cursor-pointer">
+                        Come up with a product name for a new app
+                    </div>
+                    <div class="rounded-2xl min-w-[200px] h-[200px] bg-[rgb(30,31,32)] px-3 py-3 hover:bg-[rgb(68,71,70)] hover:cursor-pointer">
+                        Brainstorm a tagline for my online store
+                    </div>
+                </div>
             </span>
-        </form>
-        <p class="text-[rgb(202,204,206)] text-[10px] text-center py-[6px]" >Gemini may display inaccurate info, including about people, so double-check its responses. <u class=" hover:cursor-pointer">Your privacy & Gemini Apps</u></p>
-    </footer>
+        </div>
 
+        <!--footer search box  -->
+        <footer class="z-10 fixedBars bg-black fixed right-0 bottom-0 pt-2 pb-1">
+            <form id="formElement" action="" class="text-white">
+                <span style="box-shadow: 0 0 10px black;" class="flex mx-auto min-w-[350px] max-w-[830px] w-[95%] rounded-3xl bg-[rgb(30,31,32)] focus:bg-[#444746] justify-center items-center overflow-hidden">
+                    <input class="outline-none pl-[24px] h-[56px] bg-transparent w-[85%]" type="text" name="" id="searchBox" placeholder="Enter a prompt here">
+                    <span class="flex justify-center items-center gap-[24px] font-extrabold pr-[24px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[24px] h-[24px] hover:cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[24px] h-[24px] hover:cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" id="searchBtn" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[24px] h-[24px] hover:cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                        
+                    </span>
+                </span>
+            </form>
+            <p class="text-[rgb(202,204,206)] text-[10px] text-center py-[6px]" >Gemini may display inaccurate info, including about people, so double-check its responses. <u class=" hover:cursor-pointer">Your privacy & Gemini Apps</u></p>
+        </footer>
+
+  </div>  
     <!-- Api -->
     <script type="importmap">
         {

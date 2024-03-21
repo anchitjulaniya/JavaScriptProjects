@@ -119,29 +119,41 @@ let left_header_container = document.getElementById("left_header_container");
 let left_header_container_width  = left_header_container.style.width;
 
 let wider_left_header_content = document.querySelectorAll(".wider_left_header_content");
+let fixedBars = document.getElementsByClassName("fixedBars")[0];
+let fixedBars_footer = document.getElementsByClassName("fixedBars")[1];
+
+// console.log(fixedBars.style);
+// let x = "calc(100% - 172px)";
+// console.log(x);
 
 let left_header_flag = true;
 left_header.addEventListener("click",()=>{
     if(!left_header_flag){
-        left_header_container.style.width = "200px"
+        left_header_container.style.width = "172px"
+        // console.log((Number(x.slice(0,x.length-1)) + 102 )+"px");
+        fixedBars.style.width = "calc(100% - 172px)"
         
         setTimeout(()=>{
-        wider_left_header_content.forEach(element => {
+            wider_left_header_content.forEach(element => {
             element.style.display = "block";
-            
         });
-        
        },1050);
-       geminiBox.style.marginLeft = "150px"
 
+        geminiBox.style.marginLeft = "0px"
+        geminBoxContainer.style.left = "15px"
         left_header_flag = true;
+
     }else{
-        geminiBox.style.marginLeft = "20px"
+        left_header_flag = false;
+        // console.log((Number(x.slice(0,x.length-1)) - 102 )+"px");
+            geminiBox.style.marginLeft = "-90px"
+            geminBoxContainer.style.left = "-75px"
             left_header_container.style.width = "70px"
+            fixedBars.style.width = "calc(100% - 70px - 102px)"
             wider_left_header_content.forEach(element => {
             element.style.display = "none";
-        });
-        left_header_flag = false;
+            });
+        
     }
 })
 

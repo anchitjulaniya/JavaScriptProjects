@@ -42,7 +42,7 @@ async function run(){
 
 // create pokemon card function
 function createPokemonCard(data){
-    console.log(data);
+    // console.log(data);
     let front_Image_url = data.sprites.other.dream_world.front_default;
     
     let back_Image_url = data.sprites.back_default
@@ -132,15 +132,25 @@ Filter_by_type_Btn.addEventListener("click",()=>{
 
 let reset = document.getElementById("reset");
 reset.addEventListener("click",()=>{
+    card_container.innerText = "";
     run();
 })
 
 
 let searchBox = document.getElementById("searchBox");
 
-// searchBox.addEventListener("keydown",()=>{
-//     let inputValue = 
-// })
+searchBox.addEventListener("keyup",()=>{
+    let inputValue = searchBox.value;
+    // console.log(inputValue);
+    let searchFilter = objects.filter((value)=>{
+        return value.types[0].type.name.includes(inputValue);
+    })
+    card_container.innerText = "";
+    searchFilter.forEach((value)=>{
+        createPokemonCard(value);
+    });
+
+})
 
 
 
