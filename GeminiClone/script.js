@@ -167,10 +167,10 @@ iconInputImageBtn.addEventListener("click",()=>{
     inputImage.click();
 })
 
-inputImage.addEventListener("change",()=>{
-    const files = inputImage.files;
-    console.log(files);
-})
+// inputImage.addEventListener("change",()=>{
+//     const files = inputImage.files;
+//     // console.log(files);
+// })
 
 
 
