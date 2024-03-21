@@ -7,10 +7,14 @@ const password = document.forms["signUp"]["password"];
 const confirmPassword = document.forms["signUp"]["confirmPassword"];
 const mobile = document.forms["signUp"]["phoneNumber"];
 
+let users;
 // console.log(fname, lname, email, password, confirmPassword, mobile);
-let userList = [];
-
-
+        if(JSON.parse(localStorage.getItem("userList"))){
+            users = JSON.parse(localStorage.getItem("userList"));
+        }else{
+            users =  [];
+        }
+        console.log(users);
 
 submitBtn.addEventListener("click",()=>{
     if(fname.value == "" || lname.value == "" || email.value == "" || password.value == "" || confirmPassword.value == "" || mobile.value == "" ){
@@ -20,7 +24,13 @@ submitBtn.addEventListener("click",()=>{
         alert("Password are not same");
     }
     else{
-        let user = {
+        users.forEach(element => {
+            if(element.email === email.value && fname.value !== "" && lname.value !== "" &&  password.value !== "" && confirmPassword.value !== "" && mobile.value !== ""){
+                alert("Already Registered");
+                window.location.href = "./log_in.html"
+            }
+        });
+        let newUser = {
             firstName : fname.value,
             lastName : lname.value,
             email : email.value,
@@ -28,20 +38,20 @@ submitBtn.addEventListener("click",()=>{
             confirmPassword : confirmPassword.value,
             mobile : mobile.value
         }
-        // userList = JSON.parse(localStorage.getItem("users"));
-        userList.push(user);
         
-        localStorage.setItem("users",JSON.stringify(userList));
-    
+        let userExists = users.some(user => user.email === newUser.email);
 
-    }
+        if(userExists){
+            alert("user alreay exists");
+            return false;
+        } else {
+            users.push(newUser);
+        }
 
-    
-
-   
-    
-
-    
+        // userList = JSON.parse(localStorage.getItem("users"));
+        
+        localStorage.setItem("userList",JSON.stringify(users));
+    }    
 
 })
 
