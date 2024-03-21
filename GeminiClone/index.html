@@ -40,6 +40,9 @@
         .fixedBars{
             /* width: calc(100% - 172px); */
         }
+        ::-webkit-scrollbar {
+        display: none;
+    }
     </style>
     
     
@@ -134,7 +137,7 @@
         </header>
 
         <!-- center div -->
-        <div class="flex justify-center pt-[100px] pb-[50px] h-[87vh] overflow-y-scroll scroll-auto">
+        <div class="flex justify-center pt-[100px] pb-[50px] h-[87vh] overflow-y-scroll scroll-auto no-scrollbar">
             <span id="displayContainer" class=" sm:w-[635px] lg:w-[800px] text-white flex flex-col items-start ">
                 <h1 class="text-6xl font-semibold" style="background: #5082EE;
                 background: linear-gradient(to right, #5082EE 0%, #A66FBA 50%, #D66675 100%);
