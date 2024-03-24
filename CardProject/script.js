@@ -6,14 +6,15 @@ let country = document.getElementById("country");
 let city = document.getElementById("city");
 let village = document.getElementById("village");
 
-let userDetails ;
+let userDetails = JSON.parse(localStorage.getItem("user"))?JSON.parse(localStorage.getItem("user")):[] ;
 
+console.log(typeof userDetails);
 if(JSON.parse(localStorage.getItem("user"))){
    userDetails = JSON.parse(localStorage.getItem("user"));
    
    console.log(userDetails);
 
-   fname.innerText = userDetails.fname;
+    fname.innerText = userDetails.fname;
     lname.innerText = userDetails.lname;
     country.innerText = userDetails.country;
     phnNo.innerText = userDetails.mobile;
@@ -41,6 +42,7 @@ if(JSON.parse(localStorage.getItem("user"))){
         city : cityValue,
         village : villageValue 
     }
+    console.log(newUser);
 
     fname.innerText = fnameValue;
     lname.innerText = lnameValue;
