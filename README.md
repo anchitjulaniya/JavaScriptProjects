@@ -20,3 +20,4 @@
 19. [Local Storage Project](https://anchitjulaniya.github.io/JavaScriptProjects/LocalStorageProject/)
 20. [Card project](https://anchitjulaniya.github.io/JavaScriptProjects/CardProject/)
 21. [Login SignUp Page Project](https://anchitjulaniya.github.io/JavaScriptProjects/Login_SignUp_Page/sign_up.html)
+22. [Movie_Search_Project](https://anchitjulaniya.github.io/JavaScriptProjects/Movie_Search_Project/)
