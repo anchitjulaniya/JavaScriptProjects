@@ -1,11 +1,6 @@
 let searchBox = document.getElementById("searchBox");
 let searchResult = document.getElementById("searchResult");
 let paginationContainer = document.getElementById("paginationContainer");
-// let previousButton = document.getElementById("previousButton");
-// let currentPageContainer = document.getElementById("currentPageContainer");
-// let nextButton = document.getElementById("nextButton");
-
-
 
 let api_key = "e48a43b1";
 
@@ -21,13 +16,16 @@ const debounce  = (fun, delay)=>{
 }
 
 searchBox.addEventListener("input",debounce(fetchMovie,1000))
+    
+
 
 let totalPages;
 
 async function fetchMovie(page = 1){ //default argument
-    let response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${api_key}&s=${searchBox.Value}&page=${page}`);
+    let response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${api_key}&s=${searchBox.value}&page=${page}`);
+    // console.log(searchBox.Value);
     let datas = await response.json();
-    console.log(datas);
+    // console.log(datas);
     let movie = datas.Search;
     totalPages = datas.totalResults;
     // page = totalPages;
