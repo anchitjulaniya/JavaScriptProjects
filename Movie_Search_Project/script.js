@@ -22,7 +22,7 @@ searchBox.addEventListener("input",debounce(fetchMovie,1000))
 let totalPages;
 
 async function fetchMovie(page = 1){ //default argument
-    let response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${api_key}&s=${searchBox.value}&page=${page}`);
+    let response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${api_key}&s=${searchBox.value}&page=${page}`);
     // console.log(searchBox.Value);
     let datas = await response.json();
     // console.log(datas);
