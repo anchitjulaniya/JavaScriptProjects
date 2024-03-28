@@ -6,9 +6,10 @@ let country = document.getElementById("country");
 let city = document.getElementById("city");
 let village = document.getElementById("village");
 
-let userDetails = JSON.parse(localStorage.getItem("user"))?JSON.parse(localStorage.getItem("user")):[] ;
 
-console.log(typeof userDetails);
+// let userDetails = JSON.parse(localStorage.getItem("user"))?JSON.parse(localStorage.getItem("user")):[] ;
+let userDetails = [];
+
 if(JSON.parse(localStorage.getItem("user"))){
    userDetails = JSON.parse(localStorage.getItem("user"));
    
@@ -53,7 +54,7 @@ if(JSON.parse(localStorage.getItem("user"))){
     village.innerText = villageValue;
 
     let userString  = JSON.stringify(newUser);
-    userDetails.push("user",userString);
+    localStorage.setItem("user",userString);
 }  
   
 
