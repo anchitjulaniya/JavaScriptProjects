@@ -1,0 +1,19 @@
+let searchResultContainer = document.getElementById("searchResultContainer");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
