@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoView</title>
+    <!-- <link rel="shortcut icon" href="images/logo.png" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   
+    <script src="https://cdn.tailwindcss.com"></script> 
+</head>
+<body class="bg-[rgb(215,215,215)]">
+    <header class="fixed top-0 bg-white px-3 lg:px-6 h-[55px] w-full flex justify-between items-center">
+        <span class="flex items-center justify-center gap-4">
+            <img class="h-[32px] w-[32px]" src="images/logo.png" alt="">
+            <h1 class="text-3xl text-black font-bold">CryptoView</h1>
+        </span>
+        <button class="bg-[#FFFFFF] text-xl border border-[#FCA311] w-[90px] h-[35px] rounded-md text-black font-semibold hover:bg-[#FCA311] hover:text-white transition-all duration-500">Search</button>
+    </header>
+
+    <main class="flex py-10 md:py-4 mt-[56px]">
+        <div class="w-[50%] justify-center flex flex-col p-10 md:p-20   gap-5">
+            <span class="font-bold text-xl md:text-3xl -mt-10">CryptoView</span>
+            <span class="text-lg md:text-xl">A platform to view information about all cryptocurrencies live.</span>
+        </div>
+        <div class="w-[50%] flex flex-start pt-4">
+            <img class="w-[500px] " src="images/main_image.svg" alt="">
+        </div>
+    </main>
+    
+    <section class="flex flex-col gap-4">
+        <h2 class="text-[#FCA311] font-bold text-3xl text-center tracking-wider w-full">Top Coins</h2>
+    <div  class="flex flex-row flex-nowrap gap-2 overflow-x-scroll scrollbar-hide w-[100%]">
+        <span class="flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
+            <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
+            <span>
+                <h2 class="text-xl font-bold">Brett (BRETT)</h2>
+                <p id="price" class="">₹ 3.9753</p>
+            </span>
+        </span>
+
+        <span class="flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
+            <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
+            <span>
+                <h2 class="text-xl font-bold">Brett (BRETT)</h2>
+                <p id="price" class="">₹ 3.9753</p>
+            </span>
+        </span>
+
+        <span class="flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
+            <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
+            <span>
+                <h2 class="text-xl font-bold">Brett (BRETT)</h2>
+                <p id="price" class="">₹ 3.9753</p>
+            </span>
+        </span>
+
+        <span class="flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
+            <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
+            <span>
+                <h2 class="text-xl font-bold">Brett (BRETT)</h2>
+                <p id="price" class="">₹ 3.9753</p>
+            </span>
+        </span>
+ 
+    </div>
+    </section>
+
+    <footer class="fixed bottom-0 w-full flex items-center justify-between px-5 text-black h-[58px] bg-white">
+        <span class="tracking-wide">© CryptoView | Developed by <b>Anchit Julaniya</b></span>
+        <a href=""><img class="w-[24px] h-[24px]" src="images/github_logo.png" alt="" srcset=""></a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
