@@ -2,7 +2,7 @@ let searchResultContainer = document.getElementById("searchResultContainer");
 
 let searchBtn = document.getElementById("searchBtn");
 
-let url = 'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=200&offset=0';
+let url = 'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=10&offset=0';
 const options = {
 	method: 'GET',
 	headers: {
@@ -16,7 +16,6 @@ try {
 	const result = await response.json();
 	// console.log(result);
     let crypoArray = result.data.coins;
-    
 
     let cardFormat = document.createElement("div");
     cardFormat.style.display= " flex";
@@ -67,8 +66,6 @@ try {
         card.style.paddingRight = "15px";
         // card.style.backgroundColor = `${color}`;
         
-        
-        
         card.innerHTML = `
         <span class="pl-[10px] w-[40px]">${index+1}</span>
         <img class="w-[42px] h-[42px]" src="${iconUrl}" alt = "">
@@ -77,8 +74,7 @@ try {
         <span class="pl-[10px] w-[90px]">Rank: ${rank}</span>
         <span class="pl-[10px] w-[210px]">Cap: $${marketCap}</span>
         
-        <button class="px-2 border rounded-lg text-black pl-[10px]">More Info</button>
-        
+        <button onclick="redirectToDetailPage('${uuid}');" class="px-2 border rounded-lg text-black pl-[10px]">More Info</button>        
         `
         searchResultContainer.append(card);
         // console.log(name, symbol, color, iconUrl, uuid, price, rank, marketCap);
@@ -95,21 +91,29 @@ searchBtn.addEventListener("click",()=>{
     let inputValue =  document.getElementById("inputBox").value;
     // console.log(inputValue);
 
-    url = `https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&search=${inputValue}&orderDirection=desc&limit=50&offset=0`;
+    url = `https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&search=${inputValue}&orderDirection=desc&limit=10&offset=0`;
     searchResultContainer.innerText = "";
     fetchCypto();
 })
 
 document.getElementById("ResetBtn").addEventListener("click",()=>{
-    url = 'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=100&offset=0';
+    url = 'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=10&offset=0';
     searchResultContainer.innerText = "";
     fetchCypto();
 })
 
-
-
-
-
+// function redirectToDetailPage(){
+function redirectToDetailPage(uuid){
+    // e.preventDefault();
+    console.log(uuid);
+    export default uuid ;
+    // let url = new URL("./detail.html"); 
+    
+    // url.searchParams.set('uuid', uuid)
+    // window.location.href = url;
+    window.location.href  = `./detail.html/id=${uuid}`; 
+    // window.location.href  = `./detail.html` 
+}
 
 
 
