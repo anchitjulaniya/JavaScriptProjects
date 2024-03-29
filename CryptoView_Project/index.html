@@ -6,7 +6,10 @@
     <title>CryptoView</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-   
+    
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    
+
     <script src="https://cdn.tailwindcss.com"></script> 
 </head>
 <body class="bg-[rgb(215,215,215)]">
@@ -28,48 +31,65 @@
         </div>
     </main>
     
-    <section class="flex flex-col gap-4 mb-[60px]">
+    <section class="flex flex-col gap-4 mb-[100px]">
         <h2 class="text-[#FCA311] font-bold text-3xl text-center tracking-wider w-full">Top Coins</h2>
-    <div  class="flex flex-row flex-nowrap gap-2 overflow-x-scroll scrollbar-hide w-[100%]">
-        <span class="flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
-            <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
-            <span>
-                <h2 class="text-xl font-bold">Brett (BRETT)</h2>
-                <p id="price" class="">₹ 3.9753</p>
+        <div class="flex flex-row gap-2  carousel"  data-flickity='{ "autoPlay": true,"groupCells": true, "pageDots": false, prevNextButtons: false }'>
+            <span class="carousel-cell flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
+                <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
+                <span>
+                    <h2 class="text-xl font-bold">Brett (BRETT)</h2>
+                    <p id="price" class="">₹ 3.9753</p>
+                </span>
             </span>
-        </span>
 
-        <span class="flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
-            <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
-            <span>
-                <h2 class="text-xl font-bold">Brett (BRETT)</h2>
-                <p id="price" class="">₹ 3.9753</p>
+            <span class="carousel-cell flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
+                <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
+                <span>
+                    <h2 class="text-xl font-bold">Brett (BRETT)</h2>
+                    <p id="price" class="">₹ 3.9753</p>
+                </span>
             </span>
-        </span>
 
-        <span class="flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
-            <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
-            <span>
-                <h2 class="text-xl font-bold">Brett (BRETT)</h2>
-                <p id="price" class="">₹ 3.9753</p>
+            <span class="carousel-cell flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
+                <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
+                <span>
+                    <h2 class="text-xl font-bold">Brett (BRETT)</h2>
+                    <p id="price" class="">₹ 3.9753</p>
+                </span>
             </span>
-        </span>
 
-        <span class="flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
-            <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
-            <span>
-                <h2 class="text-xl font-bold">Brett (BRETT)</h2>
-                <p id="price" class="">₹ 3.9753</p>
+            <span class="carousel-cell flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
+                <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
+                <span>
+                    <h2 class="text-xl font-bold">Brett (BRETT)</h2>
+                    <p id="price" class="">₹ 3.9753</p>
+                </span>
             </span>
-        </span>
- 
-    </div>
+            <span class="carousel-cell flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
+                <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
+                <span>
+                    <h2 class="text-xl font-bold">Brett (BRETT)</h2>
+                    <p id="price" class="">₹ 3.9753</p>
+                </span>
+            </span>
+            <span class="carousel-cell flex gap-8 px-6 items-center rounded-lg bg-white h-[65px] w-[416px]">
+                <img class="h-[32px] w-[32px]" src="images/1.webp" alt="">
+                <span>
+                    <h2 class="text-xl font-bold">Brett (BRETT)</h2>
+                    <p id="price" class="">₹ 3.9753</p>
+                </span>
+            </span>
+
+            
+    
+        </div>
     </section>
 
     <footer class="fixed bottom-0 w-full flex items-center justify-between px-5 text-black h-[58px] bg-white">
         <span class="tracking-wide">© CryptoView | Developed by <b>Anchit Julaniya</b></span>
         <a href="https://github.com/anchitjulaniya/JavaScriptProjects/tree/main/CryptoView_Project"><img class="w-[24px] h-[24px]" src="images/github_logo.png" alt="" srcset=""></a>
     </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="script.js"></script>
     <script src="common.js"></script>
 </body>
