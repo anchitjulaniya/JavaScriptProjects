@@ -1,16 +1,13 @@
-const url = 'https://resumeparser1.p.rapidapi.com/parse';
-const data = new FormData();
-data.append('files', '');
-
+const url = 'https://indeed12.p.rapidapi.com/jobs/search?query=manager&location=chicago&page_id=1&fromage=3&radius=50';
 const options = {
-	method: 'POST',
+	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': 'b8bb314eb8msh5bcb832919161fdp12af72jsn4c6c655daa90',
-		'X-RapidAPI-Host': 'resumeparser1.p.rapidapi.com'
-	},
-	body: data
+		'X-RapidAPI-Host': 'indeed12.p.rapidapi.com'
+	}
 };
 
+async function x(){
 try {
 	const response = await fetch(url, options);
 	const result = await response.text();
@@ -18,3 +15,5 @@ try {
 } catch (error) {
 	console.error(error);
 }
+}
+x();
