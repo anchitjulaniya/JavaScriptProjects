@@ -105,13 +105,22 @@ document.getElementById("ResetBtn").addEventListener("click",()=>{
 // function redirectToDetailPage(){
 function redirectToDetailPage(uuid){
     // e.preventDefault();
-    console.log(uuid);
-    export default uuid ;
+    // console.log(uuid);
+    // export default uuid ;
     // let url = new URL("./detail.html"); 
     
     // url.searchParams.set('uuid', uuid)
     // window.location.href = url;
-    window.location.href  = `./detail.html/id=${uuid}`; 
+    
+
+    let updateURL = `${location.pathname}/?q=${uuid}`
+    // if(history.pushState){
+    //     window.history.pushState(null,null,updateURL);
+    // }
+    // console.log("check");
+     
+
+    window.location.href  = `detail.html/?id=xyz`;    
     // window.location.href  = `./detail.html` 
 }
 
