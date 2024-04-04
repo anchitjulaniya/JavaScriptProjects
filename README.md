@@ -22,3 +22,4 @@
 21. [Login SignUp Page Project](https://anchitjulaniya.github.io/JavaScriptProjects/Login_SignUp_Page/sign_up.html)
 22. [Movie_Search_Project](https://anchitjulaniya.github.io/JavaScriptProjects/Movie_Search_Project/)
 23. [CryptoView_Project](https://anchitjulaniya.github.io/JavaScriptProjects/CryptoView_Project/)
+24. [Interview_Ready_With_AI](https://anchitjulaniya.github.io/JavaScriptProjects/Interview_Ready_With_AI/)
