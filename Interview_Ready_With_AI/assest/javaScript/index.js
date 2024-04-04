@@ -28,6 +28,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     let aiAssistantHeader = document.getElementById("aiAssistantHeader");
     let aiAssistantBody = document.getElementById("aiAssistantBody");
+    let aiAssistantContainer = document.getElementById("aiAssistantContainer");
+    
     let aiAssistantContent = document.getElementById("aiAssistantContent");
     let upIcon = document.getElementById("upIcon");
     let downIcon = document.getElementById("downIcon");
@@ -36,12 +38,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     aiAssistantHeader.addEventListener("click", () => {
         if (stateOfAiAssistant) {
-            aiAssistantBody.style.height = "0px";
+            console.log("true");
+            aiAssistantContainer.style.height = "0px";
             aiAssistantContent.style.overflowY = "hidden";
             downIcon.classList.add("hidden");
             upIcon.classList.remove("hidden");
         } else {
-            aiAssistantBody.style.height = "auto"; // Adjust height accordingly
+            console.log("False");
+            aiAssistantContainer.style.height = "500px"; 
             aiAssistantContent.style.overflowY = "auto";
             upIcon.classList.add("hidden");
             downIcon.classList.remove("hidden");

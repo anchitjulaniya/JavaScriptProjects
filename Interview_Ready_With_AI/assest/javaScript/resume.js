@@ -234,8 +234,15 @@ function printCV(){
  function downloadCV() {
     var element = document.getElementById('preview-sc');
     console.log(element);
-
-     html2pdf().from(element).save("page.pdf");
+    var opt = {
+        margin:       1,
+        filename:     'Resume.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'mm', format: 'A4', orientation: 'portrait' }
+      };
+    //  html2pdf().set(opt).from(element).save();
+    html2pdf(element,opt);
   }
   
 

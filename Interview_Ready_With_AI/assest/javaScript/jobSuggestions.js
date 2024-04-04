@@ -133,10 +133,6 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
     const genAI = new GoogleGenerativeAI(API_KEY);
 
-
-// let prompt = "Java Script road map with content to get skill";
-// let skills_dsp = document.querySelectorAll("preview-item-val");
-// console.log(skills_dsp.innerText);
 let prompt = "";
 
 async function Search(prompt){

@@ -9,13 +9,15 @@
     <style>
         .header{
         border-bottom: 1px solid #E2E8F0;
+        
     }
 
     .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 1.5rem;
+        padding: 0 1.5rem;
+        height: 70px;
     }
     .hamburger {
         display: none;
@@ -34,6 +36,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 100;
     }
 
     .nav-item {
@@ -43,11 +46,7 @@
     .nav-link{
         font-size: 1.6rem;
         font-weight: 400;
-        color: #475569;
-    }
-
-    .nav-link:hover{
-        color: #482ff7;
+        border-radius: 5px;
     }
 
     .nav-logo {
@@ -89,7 +88,7 @@
                 display: none !important;
 
             }
-
+           
 }
 
     </style>
@@ -98,15 +97,16 @@
     
 </head>
 <body class="">
-    <header class="header shadow-lg">
+    <header class="header shadow-lg bg-green-600 text-white font-semibold">
         <nav class="navbar">
-            <a href="#" class="nav-logo"></a>
+            <a href="./index.html" class="nav-logo flex items-center mt-5px"><img class="h-[60px] w-[300px]" src="./assest/images/navImg.jpg" alt="" srcset=""></a>
+            <input  class="input text-black outline-none rounded-lg w-[600px] h-[40px] px-6" type="text" name="" id="" placeholder="Search">
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="./login.html" class="nav-link">Log in</a>
+                    <a href="./login.html" class="nav-link bg-green-600 text-white font-semibold px-4 py-1 border-2 border-green-600 hover:border-white">Log in</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./signUp.html" class="nav-link">Sign Up</a>
+                    <a href="./signUp.html" class="nav-link bg-green-600 text-white font-semibold px-4 py-1 border-2 border-green-600 hover:border-white">Sign Up</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -370,12 +370,13 @@
             </span>
 
         </div>
-        <div class="fixed bottom-0 right-0 bg-[rgb(200,200,200)] w-[350px] rounded-t-xl shadow-lg">
-            <div id="aiAssistantHeader" class="bg-blue-500 gap-6 flex items-center justify-center text-lg h-[40px] text-white font-semibold hover:cursor-pointer">AI Assistant 
+        <!-- ai assistant -->
+        <div class="fixed bottom-0 z-50 right-0 bg-[rgba(240,255,240,0.5)]  overflow-hidden w-[350px] rounded-t-xl shadow-lg">
+            <div id="aiAssistantHeader" class="bg-green-600  gap-6 flex items-center justify-center text-lg h-[40px] text-white font-semibold hover:cursor-pointer">AI Assistant 
                 <span id="upIcon" class="material-symbols-outlined hidden">expand_less</span>
                 <span id="downIcon" class="material-symbols-outlined">expand_more</span>
             </div>
-            <div class="h-[500px] w-[full] text-lg relative py-2 overflow-hidden scrollbar-hidden">
+            <div style="backdrop-filter: blur(10px);" id="aiAssistantContainer" class="h-[500px] w-[full] duration-700 text-lg relative py-2 overflow-hidden scrollbar-hidden">
                 <div  id="aiAssistantContent" class="aiAssistantContent">
                     
                     <div id="aiAssistantBody" class=" w-full h-[450px] overflow-x-hidden overflow-y-auto p-2 scrollbar-hidden">
@@ -415,7 +416,7 @@
                         ></path>
                     </svg>
                     <span
-                        class="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700"
+                        class="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700 "
                     >
                         GitHub
                     </span>
@@ -455,9 +456,7 @@
             <a href="https://www.instagram.com/anchitjulaniya/" target="_blank">
                 <section class="flex justify-center items-center">
                 <button
-                    
-                    class="group flex justify-center p-2 rounded-md drop-shadow-xl from-gray-800 bg-[#a21caf] text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]"
-                >
+                    class="group flex justify-center p-2 rounded-md drop-shadow-xl from-gray-800 bg-[#a21caf] text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
