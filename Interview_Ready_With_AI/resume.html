@@ -87,6 +87,16 @@
         display: block;
         cursor: pointer;
     }
+    .dot{
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%,-50%);
+            color: black;
+        }
   }
     </style>
   </head>
@@ -750,8 +760,7 @@
         </div>
         <div class="relative h-[90vh] ">
           <div class="h-full w-full -z-10">
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.91/build/spline-viewer.js"></script>
-            <spline-viewer hint loading-anim-type="spinner-small-dark" url="https://prod.spline.design/jQ0Qi5rdNp4y0Lyp/scene.splinecode"></spline-viewer>
+           
           </div>
           <div style="backdrop-filter: (50px);" id="jobSuggestionsDisplayContainer" class="absolute z-50 top-0 left-[110px] w-[85%] rounded-xl px-24 py-6 shadow bg-[rgba(0,10,10,0.5)] h-[100%]"></div>
 
@@ -790,9 +799,49 @@
         }
       }
     </script>
+    <script>
+      // dots trail
+const dots=[];
+const cursor = {
+    x:0,
+    y:0
+};
+
+for(let i=0;i<8;i++){
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    // dot.classList.add("w-[10px]","h-[10px]","bg-[rgb(248,90,203)]","")
+    document.body.append(dot);
+    dots.push(dot);
+}
+
+document.addEventListener("mousemove",(e)=>{
+    cursor.x = e.clientX;
+    cursor.y = e.clientY;
+    console.log(cursor);
+})
+function draw(){
+    let x = cursor.x;
+    let y = cursor.y;
+
+    dots.forEach((dot,index)=>{
+        const nextDot = dots[index + 1] || 
+        dots[0];
+
+        dot.style.left = x + "px";
+        dot.style.top = y + "px";
+
+        x += (nextDot.offsetLeft - dot.offsetLeft)*0.5;
+
+        y += (nextDot.offsetTop - dot.offsetTop)*0.5;
+    })
+}
+
+setInterval(draw,25);
+    </script>
 
     <!-- <script src="html2pdf.bundle.min.js"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script> 
 
     <!-- jquery cdn -->
     <script
@@ -814,9 +863,9 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
     
-    <script src="./assest/javaScript/jobSuggestions.js" type="module"></script>
-    <script src="./assest/javaScript/resume.js"></script>
-    <script src="./assest/javaScript/resume_Script.js"></script>
+    <script src="./assest/javaScript/jobSuggestions.js" type="module" defer></script>
+    <script src="./assest/javaScript/resume.js" defer></script>
+    <script src="./assest/javaScript/resume_Script.js" defer></script>
     <!-- <script src="./assest/javaScript/geminiAi.js" type="module"></script> -->
     
     

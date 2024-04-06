@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
+        body{
+            /* font-size: 12px; */
+        }
         .header{
         border-bottom: 1px solid #E2E8F0;
+        /* font-size: 16px; */
         
     }
 
@@ -88,6 +92,17 @@
                 display: none !important;
 
             }
+
+        /* dots */
+        .dot{
+        width: 10px;
+        height: 10px;
+        background-color: black;
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%,-50%);
+    }
            
 }
 
@@ -379,7 +394,7 @@
             <div style="backdrop-filter: blur(10px);" id="aiAssistantContainer" class="h-[500px] w-[full] duration-700 text-lg relative py-2 overflow-hidden scrollbar-hidden">
                 <div  id="aiAssistantContent" class="aiAssistantContent">
                     
-                    <div id="aiAssistantBody" class=" w-full h-[450px] overflow-x-hidden overflow-y-auto p-2 scrollbar-hidden">
+                    <div id="aiAssistantBody" class=" w-full h-[450px] overflow-x-hidden overflow-y-auto px-4 py-2 scrollbar-hidden">
                        
                     </div> 
 

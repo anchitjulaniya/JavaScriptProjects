@@ -50,6 +50,7 @@ async function Search(prompt){
     <img class="w-[20px] h-[20px] rounded-full hover:cursor-pointer rotate-center" src="./assest/images/gemini_favicon.png" alt="" sizes="" srcset="">
     <div class=" text-white bg-[rgb(30,31,32)] px-[20px] py-[10px] rounded-lg">${md.render(text)}</div>
     `
+    
     aiAssistantBody.append(divBot);
 }
 
@@ -67,6 +68,7 @@ aiAssistantInputBox.addEventListener("keypress",(e)=>{
         if(aiAssistantInputBox.value.trim() !== ""){
             prompt = aiAssistantInputBox.value;
         };
+        
         Search(prompt);
         aiAssistantInputBox.innerText = "";
 
