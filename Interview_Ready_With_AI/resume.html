@@ -87,7 +87,9 @@
         display: block;
         cursor: pointer;
     }
-    .dot{
+    
+  }
+  .dot{
             width: 10px;
             height: 10px;
             background-color: black;
@@ -97,7 +99,6 @@
             transform: translate(-50%,-50%);
             color: black;
         }
-  }
     </style>
   </head>
   <body>
@@ -801,8 +802,8 @@
     </script>
     <script>
       // dots trail
-const dots=[];
-const cursor = {
+  const dots=[];
+  const cursor = {
     x:0,
     y:0
 };
@@ -810,15 +811,25 @@ const cursor = {
 for(let i=0;i<8;i++){
     const dot = document.createElement("div");
     dot.classList.add("dot");
-    // dot.classList.add("w-[10px]","h-[10px]","bg-[rgb(248,90,203)]","")
     document.body.append(dot);
     dots.push(dot);
 }
 
-document.addEventListener("mousemove",(e)=>{
+// document.addEventListener("scroll",()=>{
+//     console.log(document.scrollY);
+// })
+
+window.addEventListener("scroll",(e)=>{
+    console.log("scrollY",window.scrollY);
     cursor.x = e.clientX;
-    cursor.y = e.clientY;
-    console.log(cursor);
+    cursor.y = e.clientY + window.scrollY ;
+})
+
+document.addEventListener("mousemove",(e)=>{
+
+    cursor.x = e.clientX;
+    cursor.y = e.clientY + window.scrollY ;
+    // console.log(window.scrollTop);
 })
 function draw(){
     let x = cursor.x;

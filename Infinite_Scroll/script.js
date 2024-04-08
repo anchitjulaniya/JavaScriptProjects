@@ -21,7 +21,7 @@ console.log(window.scrollY);
 console.log(window.innerHeight);
 console.log(document.body.offsetHeight);
 window.addEventListener("scroll",()=>{
-    // console.log("scrollY",window.scrollY);
+    console.log("scrollY",window.scrollY);
     // console.log("innerHeight",window.innerHeight);
     // console.log("offsetHeight",document.body.offsetHeight);
     if(window.scrollY + window.innerHeight + 200 >= document.body.offsetHeight ){

@@ -71,11 +71,20 @@ for(let i=0;i<8;i++){
     dots.push(dot);
 }
 
-document.addEventListener("mousemove",(e)=>{
+
+window.addEventListener("scroll",(e)=>{
+    console.log("scrollY",window.scrollY);
     cursor.x = e.clientX;
-    cursor.y = e.clientY;
-    console.log(cursor);
+    cursor.y = e.clientY + window.scrollY ;
 })
+
+document.addEventListener("mousemove",(e)=>{
+
+    cursor.x = e.clientX;
+    cursor.y = e.clientY + window.scrollY ;
+    // console.log(window.scrollTop);
+})
+
 function draw(){
     let x = cursor.x;
     let y = cursor.y;
