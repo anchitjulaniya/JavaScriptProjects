@@ -159,7 +159,7 @@ document.getElementById("jobSuggestionButton").addEventListener("click",()=>{
         skills_dsp.forEach(element=>{
             prompt = prompt + element.innerHTML +" ";
         })
-        prompt += " suggest jobs with these skils"
+        prompt += "  jobs suggestions with reference links"
         
          Search(prompt,heading);
     
