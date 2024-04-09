@@ -78,7 +78,7 @@ window.addEventListener("scroll",(e)=>{
     cursor.y = e.clientY + window.scrollY ;
 })
 
-document.addEventListener("mousemove",(e)=>{
+window.addEventListener("mousemove",(e)=>{
 
     cursor.x = e.clientX;
     cursor.y = e.clientY + window.scrollY ;
@@ -102,4 +102,4 @@ function draw(){
     })
 }
 
-setInterval(draw,25);
+setInterval(draw,30);

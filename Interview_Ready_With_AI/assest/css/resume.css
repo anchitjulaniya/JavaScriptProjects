@@ -645,7 +645,7 @@ textarea{
     display: block;
     transition: 0.2s;
     font-size: 1rem;
-    color: white ;
+    color: black ;
     font-weight:700;    
   }
   padding-bottom: 6px;  

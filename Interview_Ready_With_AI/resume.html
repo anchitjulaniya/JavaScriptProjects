@@ -46,18 +46,18 @@
         z-index: 100;
     }
 
-    .nav-item {
+    /* .nav-item {
         margin-left: 5rem;
-    }
+    } */
 
     .nav-link{
-        font-size: 1.6rem;
+        font-size: 20px;
         font-weight: 400;
         border-radius: 5px;
     }
 
     .nav-logo {
-        font-size: 2.1rem;
+        font-size: 1rem;
         font-weight: 500;
     }
     @media only screen and (max-width: 768px) {
@@ -90,8 +90,8 @@
     
   }
   .dot{
-            width: 10px;
-            height: 10px;
+            /* width: 10px;
+            height: 10px; */
             background-color: black;
             position: absolute;
             border-radius: 50%;
@@ -99,6 +99,61 @@
             transform: translate(-50%,-50%);
             color: black;
         }
+        .dot0{
+         height: 15px ;
+         width: 15px; 
+        }
+        .dot1{
+         height: 13px ;
+         width: 13px; 
+        }
+        .dot2{
+         height: 11px ;
+         width: 11px; 
+        }
+        .dot3{
+         height: 9px ;
+         width: 9px; 
+        }
+        .dot4{
+         height: 6px ;
+         width: 6px; 
+        }
+        .dot5{
+         height: 4px ;
+         width: 4px; 
+        }
+        .dot6{
+         height: 3px ;
+         width: 3px; 
+        }
+        .dot7{
+         height: 2px ;
+         width: 2px; 
+        }
+
+        /* scrollbar style */
+        /* width */
+          ::-webkit-scrollbar {
+            width: 12px;
+          }
+
+          /* Track */
+          ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey; 
+            border-radius: 10px;
+          }
+          
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: rgba(150,150,150,0.5); 
+            border-radius: 15px;
+          }
+
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: rgba(120,120,120,0.5); 
+          }
     </style>
   </head>
   <body>
@@ -734,37 +789,43 @@
     </div>
 
 
-    <div class="bg-black h-[105vh]"> 
-        <div class="h-[15vh] py-4">
-          <span class="flex gap-4 w-full justify-center items-center text-white">
-            <div class="form__group field text-white">
+    <div class=" min-h-[105vh]"> 
+        <div class="py-4">
+          <span class="flex flex-col md: gap-4 w-full justify-center items-center text-white">
+            <!-- <div class="form__group field text-white">
                 <input type="input" class="form__field text-white px-4" placeholder="Name" name="name" id='name' required />
                 <label for="name" class="form__label">Search</label>
-            </div>
+            </div> -->
 
-            <button
-            type="button"
-            class="download-btn btn btn-primary"
-            id="jobSuggestionButton"
-          >
-            Job Suggestions
-          </button>
-  
-          <button
-            type="button"
-            class="download-btn btn btn-primary"
-            id="roadmapSuggestionButton"
-          >
-            RoadMap Suggestions
-          </button>
-        </span>
+            <span class="flex gap-4">
+                <button
+                type="button"
+                class="download-btn btn btn-primary"
+                id="jobSuggestionButton"
+              >
+                Job Suggestions
+              </button>
+      
+              <button
+                type="button"
+                class="download-btn btn btn-primary"
+                id="roadmapSuggestionButton"
+              >
+                RoadMap Suggestions
+              </button>
+            </span>
+          </span>
         </div>
-        <div class="relative h-[90vh] ">
-          <div class="h-full w-full -z-10">
-           
-          </div>
-          <div style="backdrop-filter: (50px);" id="jobSuggestionsDisplayContainer" class="absolute z-50 top-0 left-[110px] w-[85%] rounded-xl px-24 py-6 shadow bg-[rgba(0,10,10,0.5)] h-[100%]"></div>
+        <div class=" flex justify-center items-center w-full ">
+  
+          <!-- this is container for displaying output -->
+          <div style="box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;" 
 
+          id="jobSuggestionsDisplayContainer" 
+
+          class=" w-[85%] h-[80vh] rounded-xl pr-8 pl-10 py-6 shadow-lg h-[100%] overflow-y-auto tracking-wide leading-relaxed">
+          </div>
+          
         </div>
     </div>
    
@@ -791,6 +852,7 @@
       </div>
     
     </div> -->
+    
     <!-- script PArt---------------------------------------------------------------------------- -->
     <!-- Api -->
     <script type="importmap">
@@ -810,7 +872,7 @@
 
 for(let i=0;i<8;i++){
     const dot = document.createElement("div");
-    dot.classList.add("dot");
+    dot.classList.add(`dot${i}`, "dot");
     document.body.append(dot);
     dots.push(dot);
 }
@@ -848,7 +910,7 @@ function draw(){
     })
 }
 
-setInterval(draw,25);
+setInterval(draw,30);
     </script>
 
     <!-- <script src="html2pdf.bundle.min.js"></script> -->

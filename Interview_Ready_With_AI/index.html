@@ -43,16 +43,6 @@
         z-index: 100;
     }
 
-    .nav-item {
-        margin-left: 5rem;
-    }
-
-    .nav-link{
-        font-size: 1.6rem;
-        font-weight: 400;
-        border-radius: 5px;
-    }
-
     .nav-logo {
         font-size: 2.1rem;
         font-weight: 500;
@@ -71,15 +61,16 @@
         transition: 0.3s;
         box-shadow:
             0 10px 27px rgba(0, 0, 0, 0.05);
+        
     }
 
     .nav-menu.active {
         left: 0;
     }
-
     .nav-item {
         margin: 2.5rem 0;
     }
+   
 
     .hamburger {
         display: block;
@@ -97,17 +88,75 @@
            
 }
 /* dots */
-.dot{
-        width: 10px;
-        height: 10px;
-        background-color: black;
-        position: absolute;
-        border-radius: 50%;
-        pointer-events: none;
-        transform: translate(-50%,-50%);
-        z-index: 45;
-    }
 
+.dot{
+            /* width: 10px;
+            height: 10px; */
+            background-color: black;
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%,-50%);
+            color: black;
+        }
+        .dot0{
+         height: 15px ;
+         width: 15px; 
+        }
+        .dot1{
+         height: 13px ;
+         width: 13px; 
+        }
+        .dot2{
+         height: 11px ;
+         width: 11px; 
+        }
+        .dot3{
+         height: 9px ;
+         width: 9px; 
+        }
+        .dot4{
+         height: 6px ;
+         width: 6px; 
+        }
+        .dot5{
+         height: 4px ;
+         width: 4px; 
+        }
+        .dot6{
+         height: 3px ;
+         width: 3px; 
+        }
+        .dot7{
+         height: 2px ;
+         width: 2px; 
+        }
+
+
+
+        
+        /* scrollbar style */
+        /* width */
+        ::-webkit-scrollbar {
+            width: 12px;
+          }
+
+          /* Track */
+          ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey; 
+            border-radius: 10px;
+          }
+          
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: rgba(150,150,150,0.5); 
+            border-radius: 15px;
+          }
+
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: #b30000; 
+          }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -117,7 +166,7 @@
     <header class="header shadow-lg bg-green-600 text-white font-semibold">
         <nav class="navbar">
             <a href="./index.html" class="nav-logo flex items-center mt-5px"><img class="h-[60px] w-[300px]" src="./assest/images/navImg.jpg" alt="" srcset=""></a>
-            <input  class="input text-black outline-none rounded-lg w-[600px] h-[40px] px-6" type="text" name="" id="" placeholder="Search">
+            <input  class="input text-black outline-none rounded-lg flex-shrink w-[0px] sm-[100px] md:w-[480px] lg:w-[580px] h-[40px] px-6" type="text" name="" id="" placeholder="Search">
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="./login.html" class="nav-link bg-green-600 text-white font-semibold px-4 py-1 border-2 border-green-600 hover:border-white">Log in</a>
@@ -335,7 +384,7 @@
             <div class="flex flex-col w-3/4 lg:w-1/2 lg:max-w-[506px] lg-[h-[518px]] gap-16">
                 <div>
                     <h2 class="font-bold text-2xl">Choose Visual Editor or Code Editor</h2>
-                    <p class="text-[rgb(73,83,101)]">Insert figures, create tables, and format your writing without coding using Overleaf’s Visual Editor. Switch seamlessly to Code Editor to see the code behind your creation.</p>
+                    <p class="text-[rgb(73,83,101)] text-xl">Insert figures, create tables, and format your writing without coding using Overleaf’s Visual Editor. Switch seamlessly to Code Editor to see the code behind your creation.</p>
                     <h4 class="flex items-center gap-4 text-2xl font-semibold hover:cursor-pointer hover:underline text-[#098842] hover:cursor-pointer hover:underline">Explore features <span class="material-symbols-outlined">
                         trending_flat
                         </span></h4>
@@ -343,7 +392,7 @@
         
                 <div>
                     <h2 class="font-bold text-2xl">Learn by doing</h2>
-                    <p class="text-[rgb(73,83,101)]">Start with our example project to get familiar with how LaTeX works.</p>
+                    <p class="text-[rgb(73,83,101)] text-xl">Start with our example project to get familiar with how LaTeX works.</p>
                     <h4 class="flex items-center gap-4 text-2xl font-semibold hover:cursor-pointer hover:underline text-[#098842] hover:cursor-pointer hover:underline">Explore features <span class="material-symbols-outlined">
                         trending_flat
                         </span></h4>
@@ -351,7 +400,7 @@
         
                 <div>
                     <h2 class="font-bold text-2xl">Explore our resources</h2>
-                    <p class="text-[rgb(73,83,101)]">With hundreds of articles explaining everything from LaTeX fundamentals to advanced TeX, we’ve got your questions answered.</p>
+                    <p class="text-[rgb(73,83,101)] text-xl">With hundreds of articles explaining everything from LaTeX fundamentals to advanced TeX, we’ve got your questions answered.</p>
                     <h4 class="flex items-center gap-4 text-2xl font-semibold hover:cursor-pointer hover:underline text-[#098842] hover:cursor-pointer hover:underline">Learn LaTeX <span class="material-symbols-outlined">
                         trending_flat
                         </span></h4>
