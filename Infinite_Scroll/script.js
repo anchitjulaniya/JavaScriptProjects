@@ -17,6 +17,7 @@ async function displayImages(){
         imageContainer.append(a);
     }
 }
+
 console.log(window.scrollY);
 console.log(window.innerHeight);
 console.log(document.body.offsetHeight);
